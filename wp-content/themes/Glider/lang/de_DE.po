@@ -1,0 +1,205 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Glider 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-10-04 03:32+0600\n"
+"PO-Revision-Date: 2010-10-04 03:41+0600\n"
+"Last-Translator: \n"
+"Language-Team: Ann <anochka1985@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../comments.php:9
+msgid "Please do not load this page directly. Thanks!"
+msgstr "Uploaden Sie bitte diese Seite direkt nicht. Danke!"
+
+#: ../comments.php:13
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Dieser Artikel ist passwortgeschützt. Geben Sie Ihr Passwort ein um die Kommentare anzuzeigen."
+
+#: ../comments.php:22
+msgid "0 Comments"
+msgstr "Keine Kommentare"
+
+#: ../comments.php:22
+msgid "1 Comment"
+msgstr "1 Kommentar"
+
+#: ../comments.php:22
+msgid "Comments"
+msgstr "Kommentare"
+
+#: ../comments.php:43
+msgid "Trackbacks/Pingbacks"
+msgstr "Trackbacks/Pingbacks"
+
+#: ../comments.php:67
+msgid "Leave a Reply"
+msgstr "Einen Kommentar schreiben"
+
+#: ../comments.php:67
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Einen Kommentar schreiben zu %s"
+
+#: ../comments.php:73
+msgid "You must be"
+msgstr "Du musst"
+
+#: ../comments.php:73
+msgid "logged in"
+msgstr "eingeloggt"
+
+#: ../comments.php:73
+msgid "to post a comment."
+msgstr "sein um einen Kommentar zu schreiben."
+
+#: ../comments.php:77
+msgid "Logged in as"
+msgstr "Angemeldet als"
+
+#: ../comments.php:77
+msgid "Log out &raquo;"
+msgstr "Abmelden &raquo;"
+
+#: ../comments.php:81
+msgid "Name"
+msgstr "Name"
+
+#: ../comments.php:82
+#: ../comments.php:88
+msgid "(required)"
+msgstr "(ben&ouml;tigt)"
+
+#: ../comments.php:87
+msgid "Mail (will not be published)"
+msgstr "Mail (wird nicht ver&ouml;ffentlicht)"
+
+#: ../comments.php:93
+msgid "Website"
+msgstr "Website"
+
+#: ../comments.php:101
+msgid "Submit Comment"
+msgstr "Kommentar absenden"
+
+#: ../header.php:48
+#: ../epanel/custom_functions.php:200
+msgid "Home"
+msgstr "Startseite"
+
+#: ../header.php:96
+msgid "Blog"
+msgstr "Blog"
+
+#: ../index.php:12
+#: ../single.php:8
+msgid "From The Blog"
+msgstr "Aus dem Blog"
+
+#: ../index.php:45
+msgid "Posted by"
+msgstr "Gepostet von"
+
+#: ../index.php:45
+msgid "on"
+msgstr "am"
+
+#: ../index.php:62
+msgid "read more"
+msgstr "mehr"
+
+#: ../page.php:33
+#: ../single.php:35
+msgid "Pages"
+msgstr "Seiten"
+
+#: ../page.php:34
+#: ../single.php:36
+msgid "Edit this page"
+msgstr "Seite bearbeiten"
+
+#: ../includes/breadcrumbs.php:8
+msgid "Posts Tagged "
+msgstr "Artikel getaggt mit"
+
+#: ../includes/breadcrumbs.php:10
+#: ../includes/breadcrumbs.php:12
+#: ../includes/breadcrumbs.php:14
+msgid "Posts made in"
+msgstr "Gepostet im"
+
+#: ../includes/breadcrumbs.php:16
+msgid "Search results for"
+msgstr "Suchresultate"
+
+#: ../includes/breadcrumbs.php:24
+msgid "Posts by "
+msgstr "Gepostet von"
+
+#: ../includes/navigation.php:2
+msgid "&laquo; Older Entries"
+msgstr "&laquo; &Auml;ltere Eintr&auml;ge"
+
+#: ../includes/navigation.php:3
+msgid "Next Entries &raquo;"
+msgstr "Neuere Eintr&auml;ge &raquo;"
+
+#: ../includes/no-results.php:3
+msgid "No Results Found"
+msgstr "Nicht gefunden"
+
+#: ../includes/no-results.php:4
+msgid "The page you requested could not be found. Try refining your search, or use the navigation above to locate the post."
+msgstr "Keine Seite gefunden. Etwas anderes Suchen?"
+
+#: ../includes/postinfo.php:2
+#: ../includes/postinfo.php:4
+msgid "Posted"
+msgstr "Gepostet"
+
+#: ../includes/postinfo.php:2
+#: ../includes/postinfo.php:4
+msgid "by"
+msgstr "von"
+
+#: ../includes/postinfo.php:2
+#: ../includes/postinfo.php:4
+msgid "in"
+msgstr "in"
+
+#: ../includes/postinfo.php:2
+#: ../includes/postinfo.php:4
+msgid "0 comments"
+msgstr "Keine Kommentare"
+
+#: ../includes/postinfo.php:2
+#: ../includes/postinfo.php:4
+msgid "1 comment"
+msgstr "1 Kommentar"
+
+#: ../includes/postinfo.php:2
+#: ../includes/postinfo.php:4
+msgid "comments"
+msgstr "Kommentare"
+
+#: ../includes/functions/comments.php:13
+msgid "(Edit)"
+msgstr "(Bearbeiten)"
+
+#: ../includes/functions/comments.php:17
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar wartet auf die &Uuml;berpr&uuml;fung."
+
+#: ../includes/functions/comments.php:22
+msgid "reply"
+msgstr "beantworten"
+
