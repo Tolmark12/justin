@@ -11,8 +11,8 @@
  *
  * @var bool
  */
-define('WP_USE_THEMES', true);
-
+//define('WP_USE_THEMES', true);
+echo("asf");
 /** Loads the WordPress Environment and Template */
-require('./wp-blog-header.php');
+//require('./wp-blog-header.php');
 ?>
