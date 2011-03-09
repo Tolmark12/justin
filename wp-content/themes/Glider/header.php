@@ -33,12 +33,12 @@
 <body class="clearfix">
    
    <div id="main-leftarea">
-      <div class="topbg"></div>
+      <!-- <div class="topbg"></div> -->
       
       <a href="<?php bloginfo('url'); ?>"><?php $logo = (get_option('glider_logo') <> '') ? get_option('glider_logo') : get_bloginfo('template_directory').'/images/logo.png'; ?>
 				<img src="<?php echo $logo; ?>" alt="Logo" id="logo"/></a>
       
-      <div id="glow"></div>
+      <!-- <div id="glow"></div> -->
       
       <?php $home = is_home(); ?>
       

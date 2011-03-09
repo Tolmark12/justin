@@ -1,3 +1,5 @@
+/* @override http://justin-wedding.dev/wp-content/themes/Glider/style.css */
+
 /*
 Theme Name: Glider
 Theme URI: http://www.elegantthemes.com/gallery/
@@ -93,10 +95,10 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 
 #main-leftarea, #main-leftarea #right-border, #main-rightarea { min-height: 1024px; }
 
-#main-leftarea { float: left; width: 30%; background: url(images/leftarea-bg.jpg); position: fixed; }
-	#main-leftarea .topbg { background: url(images/leftarea-topbg.png) repeat-x; height: 26px; }
-	#logo { position:absolute; right:70px; top:13px; z-index: 5; }
-	#main-leftarea #right-border { background: url(images/border-bg.png) repeat-y; width: 15px; position: absolute; top: 0px; right: 0px; }
+#main-leftarea { float: left; width: 30%; background: url(images/tolmar/hero-justin.jpg) no-repeat #020101; position: fixed; }
+	/*#main-leftarea .topbg { background: url(images/leftarea-topbg.png) repeat-x; height: 26px; }*/
+	#logo { position:absolute; right:70px; top:53px; z-index: 5; }
+
 	span#active-arrow { background: url(images/active-arrow.png) no-repeat; display: block; width: 16px; height: 24px; position:absolute; right:-6px; top:295px; z-index: 7; }
 	#main-leftarea #glow { background: url(images/glow-bg.png) no-repeat; width: 415px; height: 438px; position: absolute; top: 20px; right: 0px; }
 	#main-leftarea #menu { position: absolute; top: 295px; right: 28px; }
@@ -104,15 +106,15 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 	#main-leftarea a:hover { color: #ded28e; text-decoration: none; }
 	#main-leftarea a.active { color: #ded28e; }
 						
-#main-rightarea { width: 70%; float: right; background: url(images/rightarea-topbg.png) repeat-x; } 
+#main-rightarea { width: 70%; float: right; background: #000 url(images/tolmar/brown-pattern.gif); padding-left: 1px;} 
 	/*#main-rightarea .topbg { background: url(images/rightarea-topbg.png) repeat-x; position: fixed; width: 70%; height: 269px; } */
 	#main-rightarea .block { padding: 89px 0px 310px 40px; width:655px; }
-	#tagline { width: 655px; height: 116px; background: url(images/tagline-bg.png) no-repeat; margin: 0px 0px 12px -8px; font-family: Georgia, serif; font-style: italic; text-shadow: 1px 1px 0px #ffffff; }
+	#tagline { width: 655px; height: 116px; background: #000url(images/tagline-bg.png) no-repeat; margin: 0px 0px 12px -8px; font-family: Georgia, serif; font-style: italic; text-shadow: 1px 1px 0px #ffffff; }
 		#tagline p#quote1 { padding: 25px 46px 0px 51px; color: #9b9b9b; font-size: 32px; }
 		#tagline p#quote2 { padding: 11px 46px 0px 61px; color: #757575; font-size: 16px; }
 		#tagline p span { color: #bf4025; }
 	
-	.content-area { background: #ffffff url(images/content-area-bottombg.png) repeat-x bottom left; border: 1px solid #ffffff; width: 576px; min-height: 400px; padding: 33px 33px 40px; -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); position: relative; }
+	.content-area { background: #ECE9D5 url(images/content-area-bottombg.png) repeat-x bottom left; border: 1px solid #ffffff; width: 576px; min-height: 400px; padding: 33px 33px 40px; -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); position: relative; }
 		.content-area a { color: #000000; font-weight: bold; }
 		.content-area h2.title, .content-area h1.title, .content-area h2.title a { color: #a6a6a6; font-size: 36px; padding-bottom: 13px; }
 		.content-area .thumb {  float: left; margin: 0px 15px 0px 0px; position: relative;}
