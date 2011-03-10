@@ -1,0 +1,4 @@
+#main-leftarea { background:url("images/blue/leftarea-bg.png"); }
+	#main-leftarea .topbg { background:url("images/blue/leftarea-topbg.png") repeat-x; }
+span#active-arrow { background:url("images/blue/active-arrow.png") no-repeat; }
+#main-leftarea #glow { background:url("images/black/glow-bg.png") no-repeat; }
