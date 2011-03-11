@@ -4,7 +4,7 @@ if (is_tag()) $post_number = get_option('glider_tagnum_posts');
 if (is_category()) $post_number = get_option('glider_catnum_posts'); 
 $blogStyle = ( get_option('glider_blog_style') == 'on' ) ? true : false; ?>
 <?php include(TEMPLATEPATH . '/header.php'); ?>
-	<!-- This is a test -->
+	<!-- This is a test  -->
 	<div id="main-rightarea">
 		<div class="topbg"></div>
 		
