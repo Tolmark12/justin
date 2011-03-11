@@ -1,2 +1,2 @@
 general: 
-    writable_directories: [ "/wp-content/cache/", "/wp-content/uploads" ]
+    writable_directories: [ ]
