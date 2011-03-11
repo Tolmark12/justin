@@ -1,5 +1,7 @@
 /* @override http://justin-wedding.dev/wp-content/themes/Glider/style.css */
 
+/* @override http://justin-wedding.dev/wp-content/themes/Glider/style.css */
+
 /*
 Theme Name: Glider
 Theme URI: http://www.elegantthemes.com/gallery/
@@ -48,7 +50,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 /*-----------------[BASIC STYLES]-----------------*/
 /*------------------------------------------------*/
 
-body { background: url(images/right-bg.jpg); line-height: 20px; font-family: Arial, Verdana, sans-serif; font-size: 12px; color: #363636; }
+body { background: url(images/right-bg.jpg); line-height: 20px; font-family: Georgia, "Times New Roman", Times, serif; font-size: 12px; color: #363636; }
 
 a { text-decoration: none; color: #5f5f5f; }
 a:hover { text-decoration: underline; }
@@ -64,7 +66,7 @@ h3 { font-size: 22px; }
 h4 { font-size: 18px; }
 h5 { font-size: 16px; }
 h6 { font-size: 14px; }
-p { padding-bottom: 10px; }
+p { padding-bottom: 10px; font-size: 16px; line-height: 28px;}
 strong { font-weight: bold; color: #1c1c1c; }
 cite, em, i { font-style: italic; }
 pre, code { font-family: Courier New, monospace; margin-bottom: 10px; }
@@ -310,7 +312,7 @@ a.readmore:hover, #sidebar div.custom-sidebar-block ul.control li a:hover, ul#ca
 h2.gallery-title, .content-area h2.title, .content-area h1.title, .content-area h2.title a { text-indent:-999em; }
 
 
-ul#main-menu li a {display:none;}
-.cufon-ready ul#main-menu li a {display:block;}
+/*ul#main-menu li a {display:none;}*/
+/*.cufon-ready ul#main-menu li a {display:block;}*/
 
-.cufon-ready .content-area h2.title, .cufon-ready .content-area h1.title, .cufon-ready  .content-area h2.title a, .cufon-ready h2.gallery-title   { text-indent:0; }
+/*.cufon-ready .content-area h2.title, .cufon-ready .content-area h1.title, .cufon-ready  .content-area h2.title a, .cufon-ready h2.gallery-title   { text-indent:0; }*/

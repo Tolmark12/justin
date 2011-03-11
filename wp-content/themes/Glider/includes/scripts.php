@@ -1,6 +1,6 @@
 <?php global $shortname; ?>
 	
-	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/cufon-yui.js"></script>
+	<!-- <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/cufon-yui.js"></script> -->
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/colaborate_thin.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.fancybox-1.2.6.pack.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.scrollTo-min.js"></script>
@@ -8,11 +8,11 @@
 	<script type="text/javascript">
 	//<![CDATA[
 		jQuery.noConflict();
-		
-		<?php if (get_option('glider_cufon') == 'on') { ?>
-			Cufon.replace('h1, h2, h3, h4, h5, h6,.comment-author')('h2.gallery-title,.wp-pagenavi,h3#comments',{textShadow:'1px 1px 0px #fff'})('#main-leftarea a',{textShadow:'2px 2px 3px rgba(0, 0, 0, 0.4)', hover: { color: '#ded28e' }});
-		<?php } ?>
-		
+		// 
+		// <?php if (get_option('glider_cufon') == 'on') { ?>
+		// 	Cufon.replace('h1, h2, h3, h4, h5, h6,.comment-author')('h2.gallery-title,.wp-pagenavi,h3#comments',{textShadow:'1px 1px 0px #fff'})('#main-leftarea a',{textShadow:'2px 2px 3px rgba(0, 0, 0, 0.4)', hover: { color: '#ded28e' }});
+		// <?php } ?>
+		// 
 		jQuery("a[class^='fancybox']").fancybox({
 			'overlayOpacity'	:	0.7,
 			'overlayColor'		:	'#000000',
@@ -85,10 +85,10 @@
 			jQuery(this).stop().animate({left: '0px'},200)
 		});
 		
-		window.setInterval( function() {Cufon.refresh('#main-leftarea a');}, 100 );
+		// window.setInterval( function() {Cufon.refresh('#main-leftarea a');}, 100 );
 		
-		<?php if (get_option('glider_cufon') == 'on') { ?>
-			Cufon.now();
-		<?php } ?>
+		// <?php if (get_option('glider_cufon') == 'on') { ?>
+		// 	Cufon.now();
+		// <?php } ?>
 	//]]>	
 	</script>

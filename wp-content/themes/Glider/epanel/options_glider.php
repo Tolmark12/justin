@@ -117,13 +117,13 @@ $options = array (
 				   "type" => "checkbox",
 				   "std" => "false",
 				   "desc" => "desc."),
-				   
-			array( "name" => "Cufon Font Replacement",
-			   "id" => $shortname."_cufon",
-			   "type" => "checkbox2",
-			   "std" => "on",
-			   "desc" => "desc."),
-			
+			// 	   
+			// array( "name" => "Cufon Font Replacement",
+			//    "id" => $shortname."_cufon",
+			//    "type" => "checkbox2",
+			//    "std" => "on",
+			//    "desc" => "desc."),
+			// 
 			array( "type" => "clearfix",),
 							   
 		array( "name" => "general-1",
