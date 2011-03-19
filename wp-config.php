@@ -14,7 +14,7 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
+/*/ ** MySQL settings - You can get this info from your web host ** //
 // The name of the database for WordPress 
 define('DB_NAME', 'lenora');
 
@@ -35,7 +35,7 @@ define('DB_COLLATE', '');
 //*/
 
 
-/*/ ** MySQL settings - You can get this info from your web host ** //
+// ** MySQL settings - You can get this info from your web host ** //
 // The name of the database for WordPress 
 define('DB_NAME', 'justin-test');
 
@@ -55,26 +55,6 @@ define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 //*/
 
-
-/*/ ** MySQL settings - You can get this info from your web host ** //
-// The name of the database for WordPress 
-define('DB_NAME', 'cari');
-
-// MySQL database username 
-define('DB_USER', 'camille');
-
-// MySQL database password 
-define('DB_PASSWORD', 'BrZoCPuh');
-
-// MySQL hostname 
-define('DB_HOST', 'localhost:/tmp/mysql/cari.sock');
-
-// Database Charset to use in creating database tables. 
-define('DB_CHARSET', 'utf8');
-
-// The Database Collate type. Don't change this if in doubt. 
-define('DB_COLLATE', '');
-//*/
 
 
 

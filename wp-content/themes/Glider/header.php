@@ -7,6 +7,9 @@
 <?php elegant_keywords(); ?>
 <?php elegant_canonical(); ?>
 
+<script type="text/javascript" src="http://use.typekit.com/voz3nft.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/jquery.fancybox-1.2.6.css" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
@@ -21,6 +24,7 @@
    <!--[if IE 7]>
       <link rel="stylesheet" type="text/css" href="css/ie7style.css" />
    <![endif]-->
+
    
 <script type="text/javascript">
    document.documentElement.className = 'js';
@@ -39,7 +43,7 @@
 				<img src="<?php echo $logo; ?>" alt="Logo" id="logo"/></a>
       
       <!-- <div id="glow"></div> -->
-      
+      <div id="the-knot"></div>
       <?php $home = is_home(); ?>
       
       <div id="menu">
