@@ -60,7 +60,7 @@ br.clear { margin: 0px; padding: 0px; }
 
 h1, h2, h3, h4, h5, h6 { font-weight: bold; padding-bottom: 5px; color: #000000; letter-spacing: -1px; line-height: 1em; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #000000; }
-h1 { font-size: 30px; }
+h1 { font-size: 30px;  }
 h2 { font-size: 24px; font-weight: Medium;}
 h3 { font-size: 22px; }
 h4 { font-size: 18px; }
@@ -118,8 +118,7 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 	
 	.content-area { background: #ECE9D5 /*url(images/content-area-bottombg.png) repeat-x bottom left*/; border: 1px solid #ffffff; width: 576px; min-height: 200px; padding: 33px 33px 40px; -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); position: relative; }
 		.content-area a { color: #000000; font-weight: bold; }
-		.content-area h2.title, .content-area h1.title, .content-area h2.title a { color: h2 {font-style: normal; font-weight:600; color: #2A2014;}
-; font-size: 36px; padding-bottom: 13px; }
+		.content-area h2.title, .content-area h1.title, .content-area h2.title a { color: #7295a9; font-weight: normal;  }
 		.content-area .thumb {  float: left; margin: 0px 15px 0px 0px; position: relative;}
 		.thumb-wrap {position: relative; height: 165px; display: block; float: left; position: relative; }
 		.content-area .thumb, .content-area .thumb .overlay { width: 183px; height: 191px; }
@@ -157,7 +156,7 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 		.content-area ul li ul, .content-area ul li ol, .comment-content ul li ul, .comment-content ul li ol { margin: 2px 0px 2px 20px; }
 		.content-area ol li ul, .content-area ol li ol, .comment-content ol li ul, .comment-content ol li ol  { margin: 2px 0px 2px 35px; }
 		
-	#breadcrumbs { color: #7c7c7c; font: italic 14px Georgia, serif; text-shadow: 1px 1px 0px #ffffff; margin: -19px 0px 16px; }
+	#breadcrumbs { color: #7c7c7c; f margin: -19px 0px 16px; }
 	#breadcrumbs a, #breadcrumbs span.raquo { color: #a6a6a6; }
 	#breadcrumbs a:hover { color: #7c7c7c; text-decoration: none; }
 	
@@ -181,7 +180,7 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 /*-------------------[COMMENTS]-------------------*/
 /*------------------------------------------------*/
 
-h3#comments { font-size: 36px; padding-bottom:5px; margin: 40px 0 16px; }
+h3#comments { font-size: 20px; padding-bottom:5px; margin: 40px 0 16px; color: #7cbff9; }
 
 .comment-icon { background: url(images/comment-bottom-bg.png) no-repeat bottom left; padding-bottom: 14px; }
 
@@ -220,9 +219,9 @@ line-height:24px; padding:0 0 0 14px; font-weight: normal; }
 	#respond h3#comments { background: none; margin: 0px; padding: 0px; } 
 	
 	.comment-author { color: #a6a6a6; font-size: 24px; }
-		.comment-author .comment-meta, .comment-author .comment-meta a { color: #9c321f; font-size: 18px; }
+		.comment-author .comment-meta, .comment-author .comment-meta a { color: #9c321f; font-size: 18px; font-weight: 400;}
 			.comment-author .comment-meta a:hover { text-decoration: none; }
-		span.fn, span.fn a { color: #a6a6a6; font-size: 24px; }
+		span.fn, span.fn a { color: #526a89; font-size: 18px; font-weight: normal; }
 			span.fn a:hover { text-decoration: none; }
 		
 	.comment-content { padding-top:2px; }
@@ -321,3 +320,6 @@ h2 {font-style: normal; font-weight:600; color: #2A2014;}
 
 /**** TOLMAR ****/
 #the-knot { width: 131px; height: 62px; background: url(images/tolmar/the-knot.png) no-repeat; position:absolute; right:129px; top:70px; z-index: 4;  }
+
+form small{ color: wheat; font-size:14px }
+#comment-wrap form small{ color: #717171; }
