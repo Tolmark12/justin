@@ -16,16 +16,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 // The name of the database for WordPress 
-define('DB_NAME', 'indira');
+define('DB_NAME', 'bobette');
 
 // MySQL database username 
-define('DB_USER', 'renita');
+define('DB_USER', 'alaine');
 
 // MySQL database password 
-define('DB_PASSWORD', 'Xxm5Cdsn');
+define('DB_PASSWORD', 'Ak9PFB8Q');
 
 // MySQL hostname 
-define('DB_HOST', 'localhost:/tmp/mysql/indira.sock');
+define('DB_HOST', 'localhost:/tmp/mysql/bobette.sock');
 
 // Database Charset to use in creating database tables. 
 define('DB_CHARSET', 'utf8');
@@ -33,6 +33,7 @@ define('DB_CHARSET', 'utf8');
 // The Database Collate type. Don't change this if in doubt. 
 define('DB_COLLATE', '');
 //*/
+
 
 
 /*/ ** MySQL settings - You can get this info from your web host ** //
