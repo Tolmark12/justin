@@ -228,9 +228,9 @@
 		
 		//! HACK
 		if ($.browser.mozilla) {
-			setTimeout(		"mediaPlaylist.displayPlaylist();
-							 mediaPlaylist.playlistInit(false); // Parameter is a boolean for autoplay.", 
-			1000);
+			setTimeout("mediaPlaylist.displayPlaylist()", 1000);
+			setTimeout("mediaPlaylist.playlistInit(false)", 1000);
+			setTimeout("alert('fun')", 1000);
 		};
 	});
 	//]]>
