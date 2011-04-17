@@ -65,7 +65,6 @@
 			$(this.cssSelector.jPlayer).jPlayer(this.options);
 
 			$(this.cssSelector.interface + " .jp-previous").click(function() {
-				alert( self );
 				self.playlistPrev();
 				$(this).blur();
 				return false;
@@ -224,7 +223,7 @@
 				mediaPlaylist.playlistNext();
 			},
 			swfPath: "http://justin.pagodabox.com/wp-content/themes/Glider/js",
-			solution: "html,flash",
+			solution: "flash,html",
 			supplied: "mp3"
 		});
 
