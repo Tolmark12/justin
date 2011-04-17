@@ -228,8 +228,12 @@
 			solution: "html,flash",
 			supplied: "mp3"
 		});
-		mediaPlaylist.displayPlaylist();
-		mediaPlaylist.playlistInit(false); // Parameter is a boolean for autoplay.
+		
+		//! HACK
+		if ($.browser.mozilla) {
+			mediaPlaylist.displayPlaylist();
+			mediaPlaylist.playlistInit(false); // Parameter is a boolean for autoplay.
+		};
 	});
 	//]]>
 
