@@ -38,6 +38,7 @@
 	//<![CDATA[
 
 	$(document).ready(function(){
+		alert( "A" );
 		var Playlist = function(instance, playlist, options) {
 			var self = this;
 
@@ -145,6 +146,7 @@
 				$(this.cssSelector.playlist + "_item_" + this.current).removeClass("jp-playlist-current").parent().removeClass("jp-playlist-current");
 				$(this.cssSelector.playlist + "_item_" + index).addClass("jp-playlist-current").parent().addClass("jp-playlist-current");
 				this.current = index;
+				alert( "B" );
 				$(this.cssSelector.jPlayer).jPlayer("setMedia", this.playlist[this.current]);
 			},
 			playlistChange: function(index) {
