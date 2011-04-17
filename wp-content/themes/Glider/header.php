@@ -135,7 +135,6 @@
 				}
 			},
 			playlistInit: function(autoplay) {
-				alert( "0" );
 				if(autoplay) {
 					this.playlistChange(this.current);
 				} else {
@@ -146,7 +145,6 @@
 				$(this.cssSelector.playlist + "_item_" + this.current).removeClass("jp-playlist-current").parent().removeClass("jp-playlist-current");
 				$(this.cssSelector.playlist + "_item_" + index).addClass("jp-playlist-current").parent().addClass("jp-playlist-current");
 				this.current = index;
-				alert( "B" );
 				$(this.cssSelector.jPlayer).jPlayer("setMedia", this.playlist[this.current]);
 			},
 			playlistChange: function(index) {
@@ -162,7 +160,7 @@
 				this.playlistChange(index);
 			}
 		};
-		alert( "hiTTTT" );
+
 		var mediaPlaylist = new Playlist("1", [
 			// {
 			// 	name:"Big Buck Bunny Trailer",
@@ -173,6 +171,7 @@
 			{
 				name:"Classical Guitar Demo",
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/Classical-Guitar-Mp3.mp3",
+				// oga:"http://www.jplayer.org/audio/ogg/Miaow-03-Lentement.ogg",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/A-Wedding-Ceremony_Classical-Demo-Image.jpg"
 			},
 			{
@@ -217,7 +216,6 @@
 			}
 		], {
 			ready: function() {
-				alert( "00" );
 				mediaPlaylist.displayPlaylist();
 				mediaPlaylist.playlistInit(false); // Parameter is a boolean for autoplay.
 			},
@@ -225,9 +223,9 @@
 				mediaPlaylist.playlistNext();
 			},
 			swfPath: "http://justin.pagodabox.com/wp-content/themes/Glider/js",
-			solution: "html,flash",
 			supplied: "mp3"
 		});
+
 	});
 	//]]>
 
