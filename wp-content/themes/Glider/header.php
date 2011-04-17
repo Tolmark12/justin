@@ -162,7 +162,7 @@
 				this.playlistChange(index);
 			}
 		};
-
+		alert( "hiTTTT" );
 		var mediaPlaylist = new Playlist("1", [
 			// {
 			// 	name:"Big Buck Bunny Trailer",
