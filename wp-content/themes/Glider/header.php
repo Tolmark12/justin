@@ -135,7 +135,6 @@
 				}
 			},
 			playlistInit: function(autoplay) {
-				alert( "0" );
 				if(autoplay) {
 					this.playlistChange(this.current);
 				} else {
@@ -146,7 +145,6 @@
 				$(this.cssSelector.playlist + "_item_" + this.current).removeClass("jp-playlist-current").parent().removeClass("jp-playlist-current");
 				$(this.cssSelector.playlist + "_item_" + index).addClass("jp-playlist-current").parent().addClass("jp-playlist-current");
 				this.current = index;
-				alert( "B" );
 				$(this.cssSelector.jPlayer).jPlayer("setMedia", this.playlist[this.current]);
 			},
 			playlistChange: function(index) {
@@ -217,7 +215,6 @@
 			}
 		], {
 			ready: function() {
-				alert( "00" );
 				mediaPlaylist.displayPlaylist();
 				mediaPlaylist.playlistInit(false); // Parameter is a boolean for autoplay.
 			},
