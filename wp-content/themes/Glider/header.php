@@ -136,6 +136,7 @@
 				}
 			},
 			playlistInit: function(autoplay) {
+				alert( "0" );
 				if(autoplay) {
 					this.playlistChange(this.current);
 				} else {
@@ -217,6 +218,7 @@
 			}
 		], {
 			ready: function() {
+				alert( "00" );
 				mediaPlaylist.displayPlaylist();
 				mediaPlaylist.playlistInit(false); // Parameter is a boolean for autoplay.
 			},
