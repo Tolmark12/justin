@@ -171,7 +171,6 @@
 			{
 				name:"Classical Guitar Demo",
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/Classical-Guitar-Mp3.mp3",
-				// oga:"http://www.jplayer.org/audio/ogg/Miaow-03-Lentement.ogg",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/A-Wedding-Ceremony_Classical-Demo-Image.jpg"
 			},
 			{
