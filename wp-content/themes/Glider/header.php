@@ -81,7 +81,6 @@
 			displayPlaylist: function() {
 				var self = this;
 				$(this.cssSelector.playlist + " ul").empty();
-				alert( this.playlist.length );
 				for (i=0; i < this.playlist.length; i++) {
 					
 					var listItem = (i === this.playlist.length-1) ? "<li class='jp-playlist-last'>" : "<li>";
@@ -222,7 +221,7 @@
 				mediaPlaylist.playlistNext();
 			},
 			swfPath: "http://justin.pagodabox.com/wp-content/themes/Glider/js",
-			solution: "html,flash",
+			solution: "flash,html",
 			supplied: "ogv, m4v, oga, mp3"
 		});
 
