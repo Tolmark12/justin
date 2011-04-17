@@ -223,7 +223,7 @@
 				mediaPlaylist.playlistNext();
 			},
 			swfPath: "http://justin.pagodabox.com/wp-content/themes/Glider/js",
-			solution: "html",
+			solution: "flash",
 			supplied: "mp3"
 		});
 
