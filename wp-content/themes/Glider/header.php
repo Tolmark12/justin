@@ -81,7 +81,9 @@
 			displayPlaylist: function() {
 				var self = this;
 				$(this.cssSelector.playlist + " ul").empty();
+				alert( this.playlist.length );
 				for (i=0; i < this.playlist.length; i++) {
+					
 					var listItem = (i === this.playlist.length-1) ? "<li class='jp-playlist-last'>" : "<li>";
 					listItem += "<a href='#' id='" + this.cssId.playlist + this.instance + "_item_" + i +"' tabindex='1'>"+ this.playlist[i].name +"</a>";
 
@@ -220,7 +222,7 @@
 				mediaPlaylist.playlistNext();
 			},
 			swfPath: "http://justin.pagodabox.com/wp-content/themes/Glider/js",
-			solution: "flash, html",
+			solution: "html,flash",
 			supplied: "ogv, m4v, oga, mp3"
 		});
 
