@@ -38,7 +38,6 @@
 	//<![CDATA[
 
 	$(document).ready(function(){
-alert( $ );
 		var Playlist = function(instance, playlist, options) {
 			var self = this;
 
@@ -211,14 +210,7 @@ alert( $ );
 				name:"Accoustic Guitar Demo",
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/I-Acoustic-Guitar-Duo-Demo.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/I-Acoustic-Guitar-Duo-Demo-Image.jpg"
-			},
-
-
-
-
-
-
-
+			}
 		], {
 			ready: function() {
 				mediaPlaylist.displayPlaylist();
@@ -227,15 +219,13 @@ alert( $ );
 			ended: function() {
 				mediaPlaylist.playlistNext();
 			},
-			swfPath: "js",
+			swfPath: "http://justin.pagodabox.com/wp-content/themes/Glider/js",
 			solution: "flash, html",
 			supplied: "ogv, m4v, oga, mp3"
 		});
 
-		// $("#jplayer_inspector_1").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
 	});
 	//]]>
-	alert("first...");
 
 	</script>
 
