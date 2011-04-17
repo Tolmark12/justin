@@ -1,10 +1,10 @@
 writable_directories: [ "/wp-content/cache/", "/wp-content/uploads" ]
-version: 5.3.5
-error_reporting: E_ALL
-date_timezone: US/central
-max_execution_time: 30
-max_input_time: 60
-post_max_size: 8M
-file_uploads: On
-upload_max_filesize: 20M
-max_file_uploads: 200
+php_version: 5.3.5
+php_error_reporting: E_ALL
+php_date_timezone: US/central
+php_max_execution_time: 300
+php_max_input_time: 60
+php_post_max_size: 20M
+php_file_uploads: On
+php_upload_max_filesize: 20M
+php_max_file_uploads: 200
