@@ -33,7 +33,7 @@
 
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
-	<script type="text/javascript" src="http://justin.pagodabox.com/wp-content/themes/Glider/js/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.jplayer.min.js"></script>
 	<script type="text/javascript">
 	//<![CDATA[
 
@@ -220,9 +220,9 @@
 			ended: function() {
 				mediaPlaylist.playlistNext();
 			},
-			swfPath: "http://justin.pagodabox.com/wp-content/themes/Glider/js",
+			swfPath: "<?php bloginfo('template_directory'); ?>/js",
 			solution: "html,flash",
-			supplied: "ogv, m4v, oga, mp3"
+			supplied: "mp3"
 		});
 
 	});
