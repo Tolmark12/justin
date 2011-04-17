@@ -65,6 +65,7 @@
 			$(this.cssSelector.jPlayer).jPlayer(this.options);
 
 			$(this.cssSelector.interface + " .jp-previous").click(function() {
+				alert( self );
 				self.playlistPrev();
 				$(this).blur();
 				return false;
@@ -81,6 +82,7 @@
 			displayPlaylist: function() {
 				var self = this;
 				$(this.cssSelector.playlist + " ul").empty();
+
 				for (i=0; i < this.playlist.length; i++) {
 					
 					var listItem = (i === this.playlist.length-1) ? "<li class='jp-playlist-last'>" : "<li>";
@@ -170,6 +172,7 @@
 			{
 				name:"Classical Guitar Demo",
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/Classical-Guitar-Mp3.mp3",
+				// oga:"http://www.jplayer.org/audio/ogg/Miaow-03-Lentement.ogg",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/A-Wedding-Ceremony_Classical-Demo-Image.jpg"
 			},
 			{
@@ -220,7 +223,7 @@
 			ended: function() {
 				mediaPlaylist.playlistNext();
 			},
-			swfPath: "<?php bloginfo('template_directory'); ?>/js",
+			swfPath: "http://justin.pagodabox.com/wp-content/themes/Glider/js",
 			solution: "html,flash",
 			supplied: "mp3"
 		});
