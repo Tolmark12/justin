@@ -38,7 +38,6 @@
 	//<![CDATA[
 
 	$(document).ready(function(){
-		alert( "A" );
 		var Playlist = function(instance, playlist, options) {
 			var self = this;
 
@@ -226,7 +225,7 @@
 				mediaPlaylist.playlistNext();
 			},
 			swfPath: "http://justin.pagodabox.com/wp-content/themes/Glider/js",
-			solution: "html,flash",
+			solution: "flash",
 			supplied: "mp3"
 		});
 
