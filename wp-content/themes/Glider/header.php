@@ -11,7 +11,7 @@
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-<!-- <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/jquery.fancybox-1.2.6.css" type="text/css" media="screen" /> -->
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/jquery.fancybox-1.2.6.css" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -135,6 +135,7 @@
 				}
 			},
 			playlistInit: function(autoplay) {
+				alert( "0" );
 				if(autoplay) {
 					this.playlistChange(this.current);
 				} else {
@@ -145,6 +146,7 @@
 				$(this.cssSelector.playlist + "_item_" + this.current).removeClass("jp-playlist-current").parent().removeClass("jp-playlist-current");
 				$(this.cssSelector.playlist + "_item_" + index).addClass("jp-playlist-current").parent().addClass("jp-playlist-current");
 				this.current = index;
+				alert( "B" );
 				$(this.cssSelector.jPlayer).jPlayer("setMedia", this.playlist[this.current]);
 			},
 			playlistChange: function(index) {
@@ -171,7 +173,6 @@
 			{
 				name:"Classical Guitar Demo",
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/Classical-Guitar-Mp3.mp3",
-				// oga:"http://www.jplayer.org/audio/ogg/Miaow-03-Lentement.ogg",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/A-Wedding-Ceremony_Classical-Demo-Image.jpg"
 			},
 			{
@@ -216,6 +217,7 @@
 			}
 		], {
 			ready: function() {
+				alert( "00" );
 				mediaPlaylist.displayPlaylist();
 				mediaPlaylist.playlistInit(false); // Parameter is a boolean for autoplay.
 			},
@@ -223,16 +225,17 @@
 				mediaPlaylist.playlistNext();
 			},
 			swfPath: "http://justin.pagodabox.com/wp-content/themes/Glider/js",
+			solution: "html,flash",
 			supplied: "mp3"
 		});
-
+		
 	});
 	//]]>
 
 	</script>
 
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-<?php //wp_head(); ?>
+<?php wp_head(); ?>
 </head>
 
 <body class="clearfix">
