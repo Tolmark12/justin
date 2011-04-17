@@ -225,15 +225,8 @@
 				mediaPlaylist.playlistNext();
 			},
 			swfPath: "http://justin.pagodabox.com/wp-content/themes/Glider/js",
-			solution: "html,flash",
 			supplied: "mp3"
 		});
-		
-		//! HACK
-		if ($.browser.mozilla) {
-			mediaPlaylist.displayPlaylist();
-			mediaPlaylist.playlistInit(false); // Parameter is a boolean for autoplay.
-		};
 	});
 	//]]>
 
