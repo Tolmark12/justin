@@ -7,7 +7,7 @@
 	
 	<script type="text/javascript">
 	//<![CDATA[
-		jQuery.noConflict();
+		// ***** FIX TO GET MUSIC PLAYER TO WORK *********** jQuery.noConflict();
 		// 
 		// <?php if (get_option('glider_cufon') == 'on') { ?>
 		// 	Cufon.replace('h1, h2, h3, h4, h5, h6,.comment-author')('h2.gallery-title,.wp-pagenavi,h3#comments',{textShadow:'1px 1px 0px #fff'})('#main-leftarea a',{textShadow:'2px 2px 3px rgba(0, 0, 0, 0.4)', hover: { color: '#ded28e' }});
