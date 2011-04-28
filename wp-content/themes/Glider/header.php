@@ -195,7 +195,7 @@
 			},
 			{
 				name:"Jazz Trio Demo",
-				m4v: "http://justin.pagodabox.com/wp-content/uploads/2011/04/F-Jazz-Trio-Demo.mp3",
+				mp3: "http://justin.pagodabox.com/wp-content/uploads/2011/04/F-Jazz-Trio-Demo.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/F-Jazz-Trio-Demo-Image1.jpg"
 			},
 			{
