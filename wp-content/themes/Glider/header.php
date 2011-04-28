@@ -201,17 +201,17 @@
 			{
 				name:"Gypsy Jazz Demo",
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/G-Gypsy-Jazz-Group-Demo.mp3",
-				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/G-Gypsy-Jazz-Trio-Demo-Image1.jpg"
+				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/G-Gypsy-Jazz-Trio-Demo-Image.jpg"
 			},
 			{
 				name:"World Music Demo",
 				mp3: "http://justin.pagodabox.com/wp-content/uploads/2011/04/Ethnic-Demo.mp3",
-				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/H-World_Ethnic-Demo-Image1.jpg"
+				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/H-World_Ethnic-Demo-Image.jpg"
 			},
 			{
 				name:"Accoustic Guitar Demo",
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/I-Acoustic-Guitar-Duo-Demo.mp3",
-				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/I-Acoustic-Guitar-Duo-Demo-Image1.jpg"
+				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/I-Acoustic-Guitar-Duo-Demo-Image.jpg"
 			}
 		], {
 			ready: function() {
