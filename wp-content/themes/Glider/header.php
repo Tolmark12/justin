@@ -189,7 +189,7 @@
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/D-Spanish-Guitar-Demo-Image1.jpg"
 			},
 			{
-				name:"Solo Guitar Demo",
+				name:"Solo Guitar Demo", 
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/E-Solo-Guitar-Demo-New.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/E-Solo-Guitar-Demo-Image1.jpg"
 			},
