@@ -1,4 +1,7 @@
-/* @override http://justin-wedding.dev/wp-content/themes/Glider/style.css */
+/* @override 
+	http://justin-wedding.dev/wp-content/themes/Glider/style.css
+	http://justin.pagodabox.com/wp-content/themes/Glider/style.css
+*/
 
 /*
 Second Change
@@ -323,3 +326,5 @@ h2 {font-style: normal; font-weight:600; color: #2A2014;}
 
 form small{ color: wheat; font-size:14px }
 #comment-wrap form small{ color: #717171; }
+p.Q { color: #441e14; font-weight:600; padding: 0 0 0 0; margin:20px 0 0 0 ; font-style: normal; width: 460px; }
+p.A { color: #a86426; padding: 0 0 0 30px;}
