@@ -169,47 +169,47 @@
 			// 	poster:"http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
 			// },
 			{
-				name:"Classical Guitar Demo",
+				name:"Classical Guitar",
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/Classical-Guitar-Mp3.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/A-Wedding-Ceremony_Classical-Demo-Image1.jpg"
 			},
 			{
-				name:"Vocals Demo",
+				name:"Vocals",
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/Vocal-Demo.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/B-Guitar_Vocal-Demo-Image1.jpg"
 			},
 			{
-				name:"Party Band Demo",
+				name:"Party Band",
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/C-Party-Band-Demo.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/C-Party-Band-Demo-Image1.jpg"
 			},
 			{
-				name:"Spanish Guitar Demo",
+				name:"Spanish Guitar",
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/D-Spanish-Guitar-Demo.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/D-Spanish-Guitar-Demo-Image1.jpg"
 			},
 			{
-				name:"Solo Guitar Demo", 
+				name:"Solo Guitar", 
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/E-Solo-Guitar-Demo-New.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/E-Solo-Guitar-Demo-Image1.jpg"
 			},
 			{
-				name:"Jazz Trio Demo",
+				name:"Jazz Trio",
 				mp3: "http://justin.pagodabox.com/wp-content/uploads/2011/04/F-Jazz-Trio-Demo.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/F-Jazz-Trio-Demo-Image1.jpg"
 			},
 			{
-				name:"Gypsy Jazz Demo",
+				name:"Gypsy Jazz",
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/G-Gypsy-Jazz-Group-Demo.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/G-Gypsy-Jazz-Trio-Demo-Image.jpg"
 			},
 			{
-				name:"World Music Demo",
+				name:"World Music",
 				mp3: "http://justin.pagodabox.com/wp-content/uploads/2011/04/Ethnic-Demo.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/H-World_Ethnic-Demo-Image.jpg"
 			},
 			{
-				name:"Accoustic Guitar Demo",
+				name:"Accoustic Duo",
 				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/I-Acoustic-Guitar-Duo-Demo.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/I-Acoustic-Guitar-Duo-Demo-Image.jpg"
 			}
