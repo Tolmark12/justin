@@ -120,7 +120,8 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 		#tagline p span { color: #bf4025; }
 	
 	.content-area { background: #ECE9D5 /*url(images/content-area-bottombg.png) repeat-x bottom left*/; border: 1px solid #ffffff; width: 576px; min-height: 200px; padding: 33px 33px 40px; -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); position: relative; }
-		.content-area a { color: #000000; font-weight: bold; }
+		.content-area a { color: #387cae; font-weight: bold; }
+		.content-area a:hover{  text-decoration: underline; } 
 		.content-area h2.title, .content-area h1.title, .content-area h2.title a { color: #7295a9; font-weight: normal;  }
 		.content-area .thumb {  float: left; margin: 0px 15px 0px 0px; position: relative;}
 		.thumb-wrap {position: relative; height: 165px; display: block; float: left; position: relative; }
@@ -326,5 +327,14 @@ h2 {font-style: normal; font-weight:600; color: #2A2014;}
 
 form small{ color: wheat; font-size:14px }
 #comment-wrap form small{ color: #717171; }
-p.Q { color: #441e14; font-weight:600; padding: 0 0 0 0; margin:20px 0 0 0 ; font-style: normal; width: 460px; }
-p.A { color: #a86426; padding: 0 0 0 30px;}
+p.Q { color: #441e14; font-weight:600; padding: 0 0 0 0; margin:20px 0 0 0 ; font-style: normal;  font-size: 14px;}
+p.A { color: #a86426; padding: 0 0 0 30px; font-size: 13px; line-height: 18px; width: 500px;}
+
+h4 { margin: 50px 0 -8px 0; font-size: 20px; padding: 0; color: #431b04; }
+
+.testimony{ width: 260px; }
+.testimony p{ font-size: 13px; line-height: 20px; }
+.float-left{ float: left; }
+.float-right{ float: right;  }
+.clear-all{ clear: both; }
+.testimony p.signature { color: #3b190f; padding: 0 0 30px 20px; font-weight: 600; }
