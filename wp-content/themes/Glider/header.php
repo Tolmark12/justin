@@ -175,7 +175,7 @@
 			},
 			{
 				name:"Vocals",
-				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/Vocal-Demo.mp3",
+				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/05/B-vocal.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/B-Guitar_Vocal-Demo-Image1.jpg"
 			},
 			{
@@ -190,7 +190,7 @@
 			},
 			{
 				name:"Solo Guitar", 
-				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/04/E-Solo-Guitar-Demo-New.mp3",
+				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/05/E-solo.mp3",
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/04/E-Solo-Guitar-Demo-Image1.jpg"
 			},
 			{
