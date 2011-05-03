@@ -175,7 +175,7 @@
 			},
 			{
 				name:"Vocals",
-				mp3:"http://www.delorum.com/client/dadmin/B-vocal.mp3", 
+				mp3:"http://justin.pagodabox.com/wp-content/uploads/2011/05/vocalB.mp3", 
 				poster: "http://justin.pagodabox.com/wp-content/uploads/2011/05/vocalB.mp3"
 			},
 			{
