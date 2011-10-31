@@ -33,12 +33,8 @@ define('DB_CHARSET', 'utf8');
 // The Database Collate type. Don't change this if in doubt. 
 define('DB_COLLATE', '');
 //*/
-echo "before db cred";
-exit;
 
 if (isset($_SERVER['PAGODA']) && $_SERVER['PAGODA'] == 'TRUE') {
-  echo "using pagoda cred";
-  exit;
     define('DB_NAME', $_SERVER['DB_NAME']);
     define('DB_USER', $_SERVER['DB_USER']);
     define('DB_PASSWORD', $_SERVER['DB_PASS']);
