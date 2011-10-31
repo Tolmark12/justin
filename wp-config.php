@@ -35,12 +35,12 @@ define('DB_COLLATE', '');
 //*/
 
 if (isset($_SERVER['PAGODA']) && $_SERVER['PAGODA'] == 'TRUE') {
-	echo("hmmm");
-	exit;
     define('DB_NAME', $_SERVER['DB_NAME']);
     define('DB_USER', $_SERVER['DB_USER']);
     define('DB_PASSWORD', $_SERVER['DB_PASS']);
     define('DB_HOST', "tunnel.newpagodabox.com:3306");
+	echo("start");
+	exit;
 }
 else {
     define('DB_NAME', 'justin-cash');
