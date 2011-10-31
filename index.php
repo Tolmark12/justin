@@ -1,19 +1,17 @@
-<?php
-echo "<!-- second change\n -->";
-/**
- * Front to the WordPress application. This file doesn't do anything, but loads
- * wp-blog-header.php which does and tells WordPress to load the theme.
- *
- * @package WordPress
- */
-
-/**
- * Tells WordPress to load the WordPress theme and output it.
- *
- * @var bool
- */
-define('WP_USE_THEMES', true);
-
-/** Loads the WordPress Environment and Template */
-require('./wp-blog-header.php');
-?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8">
+	<title></title>
+	<script type="text/javascript" charset="utf-8">
+		function transferToURL(){ 
+			window.location.href="http://justin.newpagodabox.com" 
+		}
+	</script>
+	<BODY onLoad="transferToURL()">.
+</head>
+<body>
+	
+</body>
+</html>
