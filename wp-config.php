@@ -39,8 +39,6 @@ if (isset($_SERVER['PAGODA']) && $_SERVER['PAGODA'] == 'TRUE') {
     define('DB_USER', $_SERVER['DB_USER']);
     define('DB_PASSWORD', $_SERVER['DB_PASS']);
     define('DB_HOST', "tunnel.newpagodabox.com:3306");
-	echo("start");
-	exit;
 }
 else {
     define('DB_NAME', 'justin-cash');
