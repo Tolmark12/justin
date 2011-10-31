@@ -34,12 +34,10 @@ define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 //*/
 
-echo ($_SERVER['DB_NAME']);
-
 define('DB_NAME', $_SERVER['DB_NAME']);
 define('DB_USER', $_SERVER['DB_USER']);
 define('DB_PASS', $_SERVER['DB_PASSWORD']);
-define('DB_HOST', "tunnel.pagodabox.com:3306");
+define('DB_HOST', "tunnel.newpagodabox.com:3306");
 
 
 
