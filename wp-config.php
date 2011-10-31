@@ -34,12 +34,18 @@ define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 //*/
 
-define('DB_NAME', $_SERVER['DB_NAME']);
-define('DB_USER', $_SERVER['DB_USER']);
-define('DB_PASS', $_SERVER['DB_PASSWORD']);
-define('DB_HOST', "tunnel.newpagodabox.com:3306");
-
-
+if (isset($_SERVER['PAGODA']) && $_SERVER['PAGODA'] == 'TRUE') {
+    define('DB_NAME', $_SERVER['DB_NAME']);
+    define('DB_USER', $_SERVER['DB_USER']);
+    define('DB_PASSWORD', $_SERVER['DB_PASS']);
+    define('DB_HOST', "tunnel.newpagodabox.com:3306");
+}
+else {
+    define('DB_NAME', 'justin-cash');
+    define('DB_USER', 'root');
+    define('DB_PASSWORD', 'root');
+    define('DB_HOST', 'localhost');
+}
 
 /*/ ** MySQL settings - You can get this info from your web host ** //
 // The name of the database for WordPress 
