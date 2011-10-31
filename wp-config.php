@@ -16,16 +16,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 // The name of the database for WordPress 
-define('DB_NAME', 'bobette');
+//define('DB_NAME', 'bobette');
 
 // MySQL database username 
-define('DB_USER', 'alaine');
+//define('DB_USER', 'alaine');
 
 // MySQL database password 
-define('DB_PASSWORD', 'Ak9PFB8Q');
+//define('DB_PASSWORD', 'Ak9PFB8Q');
 
 // MySQL hostname 
-define('DB_HOST', 'localhost:/tmp/mysql/bobette.sock');
+//define('DB_HOST', 'localhost:/tmp/mysql/bobette.sock');
 
 // Database Charset to use in creating database tables. 
 define('DB_CHARSET', 'utf8');
@@ -33,6 +33,11 @@ define('DB_CHARSET', 'utf8');
 // The Database Collate type. Don't change this if in doubt. 
 define('DB_COLLATE', '');
 //*/
+
+define('DB_NAME', $_SERVER['DB_NAME']);
+define('DB_USER', $_SERVER['DB_USER']);
+define('DB_PASS', $_SERVER['DB_PASSWORD']);
+define('DB_HOST', "tunnel.pagodabox.com:3306");
 
 
 
