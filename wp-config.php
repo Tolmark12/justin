@@ -33,9 +33,7 @@ define('DB_CHARSET', 'utf8');
 // The Database Collate type. Don't change this if in doubt. 
 define('DB_COLLATE', '');
 //*/
-echo("pre<br/>");
 if (isset($_SERVER['PAGODA']) && $_SERVER['PAGODA'] == 'TRUE') {
-	echo("if");
     define('DB_NAME', $_SERVER['DB1_NAME']);
     define('DB_USER', $_SERVER['DB1_USER']);
     define('DB_PASSWORD', $_SERVER['DB1_PASS']);
