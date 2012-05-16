@@ -2,7 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-<title><?php elegant_titles(); ?></title>
+<title>Acoustic and Classical Guitarist and Performer Justin Cash</title>
+<meta name="country" content="USA"/>
+<meta name="state" content="Texas"/>
+<meta name="city" content="Denton, Dallas, Fortworth" />
+<meta name="zipcode" content="76208"/>
+<meta name="geo.region" content="US-TX" />
+<meta name="geo.placename" content="Dallas" />
+<meta name="description" content="Acoustic and classical musician and artist Justin Cash is the top rated performer for the Dallas, North Texas region.  Book your guitar wedding or event today." />
+<meta name="keywords" content="Acoustic, Classical, Guitar, Wedding, Dallas Performer, Singer, Song writer, Musician" />
+
+<!-- <title><?php elegant_titles(); ?></title> -->
 <?php elegant_description(); ?>
 <?php elegant_keywords(); ?>
 <?php elegant_canonical(); ?>
