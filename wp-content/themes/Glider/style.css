@@ -100,7 +100,11 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 
 #main-leftarea, #main-leftarea #right-border, #main-rightarea { min-height: 1024px; }
 
-#main-leftarea { float: left; width: 30%; background: url(images/tolmar/hero-justin.jpg) no-repeat #020101; position: fixed; }
+#main-leftarea { float: left; width: 30%; background: url(images/tolmar/hero-justin.jpg) no-repeat #020101; position: fixed;
+	 _position:absolute;
+	 top:0;
+	 _top:expression(eval(document.body.scrollTop));
+ }
 	/*#main-leftarea .topbg { background: url(images/leftarea-topbg.png) repeat-x; height: 26px; }*/
 	#logo { position:absolute; right:70px; top:10px; z-index: 5; }
 
