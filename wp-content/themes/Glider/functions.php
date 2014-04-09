@@ -17,4 +17,16 @@ require_once(TEMPLATEPATH . '/epanel/post_thumbnails_glider.php');
 require_once(TEMPLATEPATH . '/includes/additional_functions.php');
 
 $wp_ver = substr($GLOBALS['wp_version'],0,3);
-if ($wp_ver >= 2.8) include(TEMPLATEPATH . '/includes/widgets.php'); ?>
+if ($wp_ver >= 2.8) include(TEMPLATEPATH . '/includes/widgets.php'); 
+
+add_filter('upload_mimes','restrict_mime');
+function restrict_mime($mimes) {
+$mimes = array(
+  'jpg|jpeg|jpe' => 'image/jpeg',
+  'gif' => 'image/gif',
+  'mp3' => 'audio/mpeg',
+);
+return $mimes;
+}
+
+?>
