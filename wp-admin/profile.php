@@ -1,6 +1,6 @@
 <?php
 /**
- * User Profile Administration Panel.
+ * User Profile Administration Screen.
  *
  * @package WordPress
  * @subpackage Administration
@@ -15,5 +15,4 @@
 define('IS_PROFILE_PAGE', true);
 
 /** Load User Editing Page */
-require_once('./user-edit.php');
-?>
+require_once( dirname( __FILE__ ) . '/user-edit.php' );

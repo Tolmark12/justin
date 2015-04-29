@@ -24,7 +24,7 @@ function restrict_mime($mimes) {
 $mimes = array(
   'jpg|jpeg|jpe' => 'image/jpeg',
   'gif' => 'image/gif',
-  'mp3' => 'audio/mpeg',
+  'mp3' => 'audio/mpeg'
 );
 return $mimes;
 }

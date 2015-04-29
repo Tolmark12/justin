@@ -1,59 +1,53 @@
 <?php
 /**
- * WordPress implementation for PHP functions missing from older PHP versions.
+ * WordPress implementation for PHP functions either missing from older PHP versions or not included by default.
  *
  * @package PHP
  * @access private
  */
 
-// Added in PHP 5.0
-
-if (!function_exists('http_build_query')) {
-	function http_build_query($data, $prefix=null, $sep=null) {
-		return _http_build_query($data, $prefix, $sep);
-	}
-}
-
-// from php.net (modified by Mark Jaquith to behave like the native PHP5 function)
-function _http_build_query($data, $prefix=null, $sep=null, $key='', $urlencode=true) {
-	$ret = array();
-
-	foreach ( (array) $data as $k => $v ) {
-		if ( $urlencode)
-			$k = urlencode($k);
-		if ( is_int($k) && $prefix != null )
-			$k = $prefix.$k;
-		if ( !empty($key) )
-			$k = $key . '%5B' . $k . '%5D';
-		if ( $v === NULL )
-			continue;
-		elseif ( $v === FALSE )
-			$v = '0';
-
-		if ( is_array($v) || is_object($v) )
-			array_push($ret,_http_build_query($v, '', $sep, $k, $urlencode));
-		elseif ( $urlencode )
-			array_push($ret, $k.'='.urlencode($v));
-		else
-			array_push($ret, $k.'='.$v);
-	}
-
-	if ( NULL === $sep )
-		$sep = ini_get('arg_separator.output');
-
-	return implode($sep, $ret);
-}
-
+// If gettext isn't available
 if ( !function_exists('_') ) {
 	function _($string) {
 		return $string;
 	}
 }
 
-if (!function_exists('stripos')) {
-	function stripos($haystack, $needle, $offset = 0) {
-		return strpos(strtolower($haystack), strtolower($needle), $offset);
+if ( ! function_exists( 'mb_substr' ) ) :
+	function mb_substr( $str, $start, $length = null, $encoding = null ) {
+		return _mb_substr( $str, $start, $length, $encoding );
 	}
+endif;
+
+function _mb_substr( $str, $start, $length = null, $encoding = null ) {
+	// The solution below works only for UTF-8,
+	// so in case of a different charset just use built-in substr()
+	$charset = get_option( 'blog_charset' );
+	if ( ! in_array( $charset, array( 'utf8', 'utf-8', 'UTF8', 'UTF-8' ) ) ) {
+		return is_null( $length ) ? substr( $str, $start ) : substr( $str, $start, $length );
+	}
+	// Use the regex unicode support to separate the UTF-8 characters into an array
+	preg_match_all( '/./us', $str, $match );
+	$chars = is_null( $length ) ? array_slice( $match[0], $start ) : array_slice( $match[0], $start, $length );
+	return implode( '', $chars );
+}
+
+if ( ! function_exists( 'mb_strlen' ) ) :
+	function mb_strlen( $str, $encoding = null ) {
+		return _mb_strlen( $str, $encoding );
+	}
+endif;
+
+function _mb_strlen( $str, $encoding = null ) {
+	// The solution below works only for UTF-8,
+	// so in case of a different charset just use built-in strlen()
+	$charset = get_option( 'blog_charset' );
+	if ( ! in_array( $charset, array( 'utf8', 'utf-8', 'UTF8', 'UTF-8' ) ) ) {
+		return strlen( $str );
+	}
+	// Use the regex unicode support to separate the UTF-8 characters into an array
+	preg_match_all( '/./us', $str, $match );
+	return count( $match[0] );
 }
 
 if ( !function_exists('hash_hmac') ):
@@ -85,50 +79,11 @@ function _hash_hmac($algo, $data, $key, $raw_output = false) {
 	return $hmac;
 }
 
-if ( !function_exists('mb_substr') ):
-	function mb_substr( $str, $start, $length=null, $encoding=null ) {
-		return _mb_substr($str, $start, $length, $encoding);
-	}
-endif;
-
-function _mb_substr( $str, $start, $length=null, $encoding=null ) {
-	// the solution below, works only for utf-8, so in case of a different
-	// charset, just use built-in substr
-	$charset = get_option( 'blog_charset' );
-	if ( !in_array( $charset, array('utf8', 'utf-8', 'UTF8', 'UTF-8') ) ) {
-		return is_null( $length )? substr( $str, $start ) : substr( $str, $start, $length);
-	}
-	// use the regex unicode support to separate the UTF-8 characters into an array
-	preg_match_all( '/./us', $str, $match );
-	$chars = is_null( $length )? array_slice( $match[0], $start ) : array_slice( $match[0], $start, $length );
-	return implode( '', $chars );
-}
-
-if ( !function_exists( 'htmlspecialchars_decode' ) ) {
-	// Added in PHP 5.1.0
-	// Error checks from PEAR::PHP_Compat
-	function htmlspecialchars_decode( $string, $quote_style = ENT_COMPAT )
-	{
-		if ( !is_scalar( $string ) ) {
-			trigger_error( 'htmlspecialchars_decode() expects parameter 1 to be string, ' . gettype( $string ) . ' given', E_USER_WARNING );
-			return;
-		}
-
-		if ( !is_int( $quote_style ) && $quote_style !== null ) {
-			trigger_error( 'htmlspecialchars_decode() expects parameter 2 to be integer, ' . gettype( $quote_style ) . ' given', E_USER_WARNING );
-			return;
-		}
-
-		return wp_specialchars_decode( $string, $quote_style );
-	}
-}
-
-// For PHP < 5.2.0
 if ( !function_exists('json_encode') ) {
 	function json_encode( $string ) {
 		global $wp_json;
 
-		if ( !is_a($wp_json, 'Services_JSON') ) {
+		if ( ! ( $wp_json instanceof Services_JSON ) ) {
 			require_once( ABSPATH . WPINC . '/class-json.php' );
 			$wp_json = new Services_JSON();
 		}
@@ -141,7 +96,7 @@ if ( !function_exists('json_decode') ) {
 	function json_decode( $string, $assoc_array = false ) {
 		global $wp_json;
 
-		if ( !is_a($wp_json, 'Services_JSON') ) {
+		if ( ! ($wp_json instanceof Services_JSON ) ) {
 			require_once( ABSPATH . WPINC . '/class-json.php' );
 			$wp_json = new Services_JSON();
 		}
@@ -158,13 +113,37 @@ if ( !function_exists('json_decode') ) {
 	}
 }
 
-// pathinfo that fills 'filename' without extension like in PHP 5.2+
-function pathinfo52($path) {
-	$parts = pathinfo($path);
-	if ( !isset($parts['filename']) ) {
-		$parts['filename'] = substr( $parts['basename'], 0, strrpos($parts['basename'], '.') );
-		if ( empty($parts['filename']) ) // there's no extension
-			$parts['filename'] = $parts['basename'];
+if ( ! function_exists( 'hash_equals' ) ) :
+/**
+ * Compare two strings in constant time.
+ *
+ * This function was added in PHP 5.6.
+ * It can leak the length of a string.
+ *
+ * @since 3.9.2
+ *
+ * @param string $a Expected string.
+ * @param string $b Actual string.
+ * @return bool Whether strings are equal.
+ */
+function hash_equals( $a, $b ) {
+	$a_length = strlen( $a );
+	if ( $a_length !== strlen( $b ) ) {
+		return false;
 	}
-	return $parts;
+	$result = 0;
+
+	// Do not attempt to "optimize" this.
+	for ( $i = 0; $i < $a_length; $i++ ) {
+		$result |= ord( $a[ $i ] ) ^ ord( $b[ $i ] );
+	}
+
+	return $result === 0;
+}
+endif;
+
+// JSON_PRETTY_PRINT was introduced in PHP 5.4
+// Defined here to prevent a notice when using it with wp_json_encode()
+if ( ! defined( 'JSON_PRETTY_PRINT' ) ) {
+	define( 'JSON_PRETTY_PRINT', 128 );
 }
