@@ -1,4 +1,4 @@
-/* @override 
+/* @override
 	http://justin-wedding.dev/wp-content/themes/Glider/style.css
 	http://justin.pagodabox.com/wp-content/themes/Glider/style.css
 */
@@ -100,7 +100,7 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 
 #main-leftarea, #main-leftarea #right-border, #main-rightarea { min-height: 1024px; }
 
-#main-leftarea { float: left; width: 30%; background: url(images/tolmar/hero-justin.jpg) no-repeat #020101; position: fixed;
+#main-leftarea { float: left; width: 30%; background: url(images/tolmar/hero-justin-new.jpg) no-repeat #201811; position: fixed;
 	 _position:absolute;
 	 top:0;
 	 _top:expression(eval(document.body.scrollTop));
@@ -114,18 +114,18 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 	#main-leftarea a { color: #ffffff; font-size: 15px; text-shadow: 2px 2px 2px rgba(0,0,0,0.3); padding: 10px 15px 10px 10px; }
 	#main-leftarea a:hover { color: #a35c25; text-decoration: none; }
 	#main-leftarea a.active { color: #cd7431; }
-						
-#main-rightarea { width: 70%; float: right; background: #000 url(images/tolmar/brown-pattern.gif); padding-left: 1px;} 
+
+#main-rightarea { width: 70%; float: right; background: #000 url(images/tolmar/brown-pattern.gif); padding-left: 1px;}
 	/*#main-rightarea .topbg { background: url(images/rightarea-topbg.png) repeat-x; position: fixed; width: 70%; height: 269px; } */
 	#main-rightarea .block { padding: 89px 0px 310px 40px; width:655px; }
 	#tagline { width: 655px; height: 116px; background: #000url(images/tagline-bg.png) no-repeat; margin: 0px 0px 12px -8px; font-family: Georgia, serif; font-style: italic; text-shadow: 1px 1px 0px #ffffff; }
 		#tagline p#quote1 { padding: 25px 46px 0px 51px; color: #9b9b9b; font-size: 32px; }
 		#tagline p#quote2 { padding: 11px 46px 0px 61px; color: #757575; font-size: 16px; }
 		#tagline p span { color: #bf4025; }
-	
+
 	.content-area { background: #ECE9D5 /*url(images/content-area-bottombg.png) repeat-x bottom left*/; border: 1px solid #ffffff; width: 576px; min-height: 200px; padding: 33px 33px 40px; -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); position: relative; }
 		.content-area a { color: #387cae; font-weight: bold; }
-		.content-area a:hover{  text-decoration: underline; } 
+		.content-area a:hover{  text-decoration: underline; }
 		.content-area h2.title, .content-area h1.title, .content-area h2.title a { color: #7295a9; font-weight: normal;  }
 		.content-area .thumb {  float: left; margin: 0px 15px 0px 0px; position: relative;}
 		.thumb-wrap {position: relative; height: 165px; display: block; float: left; position: relative; }
@@ -135,15 +135,15 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 		.gallery-title { color: #b99a69; font-size: 20px; padding-bottom: 10px; font-weight: 300;}
 
 		.blogstyle { margin-bottom: 20px; min-height: 10px; }
-		
+
 		.gallery-area .thumb { position: relative; background: url(images/thumbbottom-shadow.png) no-repeat bottom left; float: left; margin: 0px 22px 18px 0px; padding-bottom: 13px; }
 		.gallery-area .last { margin-right: 0px; }
-		
+
 			.gallery-area .thumb .image { border: 5px solid #ffffff; -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); background: #000000; }
 				.gallery-area .thumb .image a.fancybox { display: block; }
 			.gallery-area .thumb span.overlay { position: absolute; background: url(images/gallery-overlay.png) no-repeat; top: 5px; left: 5px; display: block; width: 133px; height: 133px; }
 			.gallery-area .thumb span.magnify { width: 36px; height: 37px; background: url(images/magnify.png) no-repeat; position: absolute; top: 55px; left: 53px; display: block; }
-			
+
 		.block .small { width: 263px; float: left; margin: 0 18px 17px 0; position: relative; padding: 24px 24px 35px; min-height: 200px; }
 		.block .last { margin-right: 0px; }
 			h2.blogtitle { font-size: 25px; }
@@ -158,21 +158,21 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 				a.readmore:hover { color: #000000; }
 			.content-area .shadow { position: absolute; bottom: -18px; left: 0px; width: 640px; height: 17px; background: url(images/big-bottom-shadow.png) no-repeat; }
 			.block .small .shadow { position: absolute; bottom: -11px; left: 0px; width: 311px; height: 10px; background: url(images/entry-bottom-shadow.png) no-repeat; }
-			
+
 	.content-area ul, .comment-content ul { list-style-type: disc; margin: 10px 0px 10px 20px; }
 	.content-area ol, .comment-content ol { list-style-type: decimal; list-style-position: inside; margin: 10px 0px 10px 2px; }
 		.content-area ul li ul, .content-area ul li ol, .comment-content ul li ul, .comment-content ul li ol { margin: 2px 0px 2px 20px; }
 		.content-area ol li ul, .content-area ol li ol, .comment-content ol li ul, .comment-content ol li ol  { margin: 2px 0px 2px 35px; }
-		
+
 	#breadcrumbs { color: #7c7c7c; f margin: -19px 0px 16px; }
 	#breadcrumbs a, #breadcrumbs span.raquo { color: #a6a6a6; }
 	#breadcrumbs a:hover { color: #7c7c7c; text-decoration: none; }
-	
+
 	h2.title a:hover { text-decoration: none; }
-			
+
 /*------------------------------------------------*/
 /*---------------[MENU]---------------------------*/
-/*------------------------------------------------*/		
+/*------------------------------------------------*/
 
 #main-menu { text-align: right; }
 	#main-menu li { margin-bottom: 17px; }
@@ -180,10 +180,10 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 
 /*------------------------------------------------*/
 /*--------------[FEATURED SLIDER]-----------------*/
-/*------------------------------------------------*/		
-		
+/*------------------------------------------------*/
 
-		
+
+
 /*------------------------------------------------*/
 /*-------------------[COMMENTS]-------------------*/
 /*------------------------------------------------*/
@@ -196,9 +196,9 @@ h3#comments { font-size: 20px; padding-bottom:5px; margin: 40px 0 16px; color: #
 
 div.authordata { width: 100px; }
 		div.avatar { float: left; position: relative; background: url(images/avatar-bg.png) no-repeat; padding:6px 4px 6px 6px; }
-		
+
 	.comment-wrap { float:left; margin-left:14px; }
-			
+
 		.reply-container { background:url("images/readmore.png") no-repeat scroll right bottom transparent; color:#282828; display:block; float:right; font-size:11px; font-weight:normal; height:27px; padding-right:14px; text-shadow:1px 1px 0 #FFFFFF; }
 			.reply-container a { background:url("images/readmore.png") no-repeat scroll 0 0 transparent; display:block; height:27px;
 line-height:24px; padding:0 0 0 14px; font-weight: normal; }
@@ -208,36 +208,36 @@ line-height:24px; padding:0 0 0 14px; font-weight: normal; }
 	li.depth-2 .comment-wrap { width: 378px; }
 	li.depth-3 .comment-wrap { width: 296px; }
 	li.depth-4 .comment-wrap { width: 214px; }
-		
+
 	ol.commentlist { list-style:none outside none; }
 		ol.commentlist ul { list-style:none outside none; }
-	
+
 		.commentlist li.comment li { background: none; padding: 0px; }
 		.commentlist li.comment ul { margin: 8px 0px 8px 82px; }
-		
+
 	#respond { padding-top: 30px; padding-bottom: 10px; }
 		.comment #respond { padding-left: 0px; padding-top: 5px; }
 		#commentform textarea#comment { width: 88%; }
 		#commentform input[type=text] { width: 40%; }
-		
-	
+
+
 		li.comment #respond textarea { width: 88% !important; }
 		li.comment #respond input[type=text] { width: 50% !important; }
-		
-	#respond h3#comments { background: none; margin: 0px; padding: 0px; } 
-	
+
+	#respond h3#comments { background: none; margin: 0px; padding: 0px; }
+
 	.comment-author { color: #a6a6a6; font-size: 24px; }
 		.comment-author .comment-meta, .comment-author .comment-meta a { color: #9c321f; font-size: 18px; font-weight: 400;}
 			.comment-author .comment-meta a:hover { text-decoration: none; }
 		span.fn, span.fn a { color: #526a89; font-size: 18px; font-weight: normal; }
 			span.fn a:hover { text-decoration: none; }
-		
+
 	.comment-content { padding-top:2px; }
-	
+
 	.avatar span.overlay { background: url(images/avatar-bg.png) no-repeat; position: absolute; top: 0px; left: 0px; width: 69px; height: 74px; }
-	
+
 	#comment-section { min-height: 10px; }
-		
+
 /*------------------------------------------------*/
 /*---------------------[FOOTER]-------------------*/
 /*------------------------------------------------*/
@@ -249,7 +249,7 @@ line-height:24px; padding:0 0 0 14px; font-weight: normal; }
 /*------------------------------------------------*/
 
 
-			
+
 /*------------------------------------------------*/
 /*------------[CAPTIONS AND ALIGNMENTS]-----------*/
 /*------------------------------------------------*/
@@ -265,7 +265,7 @@ div.post .new-post .aligncenter, .aligncenter { display: block; margin-left: aut
 img.alignleft { display:inline; float:left; margin-right:15px; }
 img.alignright { display:inline; float:right; margin-left:15px; }
 
-	
+
 /*------------------------------------------------*/
 /*---------------[DEFAULT DROPDOWN SETTINGS]---*/
 /*------------------------------------------------*/
@@ -296,7 +296,7 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 		#wp-calendar #prev a, #wp-calendar #next a { font-size: 9pt; }
 		#wp-calendar #next a { padding-right: 10px; text-align: right; }
 		#wp-calendar #prev a { padding-left: 10px; text-align: left; }
-		
+
 /*------------------------------------------------*/
 /*-------------------[PAGE NAVI]------------------*/
 /*------------------------------------------------*/
@@ -310,11 +310,11 @@ img.alignright { display:inline; float:right; margin-left:15px; }
 
 a.readmore:hover, #sidebar div.custom-sidebar-block ul.control li a:hover, ul#cats-menu li a:hover, ul#page-menu li a:hover, div#slider-control div.featitem h2 a  { text-decoration: none; }
 
-.js #feat-content, .js div#from-blog div.entries {display: none;} 
+.js #feat-content, .js div#from-blog div.entries {display: none;}
 
 .foursixeight { margin: 0px 0px 15px 84px;}
 
-.fullwidth { width: 100% !important; } 
+.fullwidth { width: 100% !important; }
 .pagination { clear:both; }
 
 
