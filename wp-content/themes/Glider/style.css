@@ -344,3 +344,12 @@ h4 { margin: 50px 0 -8px 0; font-size: 20px; padding: 0; color: #431b04; }
 .testimony p.signature { color: #3b190f; padding: 0 0 30px 20px; font-weight: 600; }
 ol li { color: #a86426; font-size: 15px; margin: 0 0 5px 30px;}
 h5 { margin: 20px 0 0 0; font-weight: 60000; color: #441e14; }
+
+.jp-jplayer{
+	width: initial !important;
+	height: initial !important;
+}
+.jp-player img{
+	width: initial !important;
+	height: initial !important;
+}
