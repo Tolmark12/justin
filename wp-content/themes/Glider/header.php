@@ -190,7 +190,7 @@
 			{
 				name:"Party Band",
 				mp3:"/wp-content/uploads/2011/04/C-Party-Band-Demo.mp3",
-        poster: "/wp-content/uploads/2011/04/C-Party-Band-Demo-Image1.jpg"
+        poster: "/wp-content/themes/Glider/images/tolmar/music/party.jpg"
 			},
 			{
 				name:"Spanish Guitar",
