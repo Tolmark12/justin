@@ -190,17 +190,17 @@
 			{
 				name:"Party Band",
 				mp3:"/wp-content/uploads/2011/04/C-Party-Band-Demo.mp3",
-        poster: "/wp-content/themes/Glider/images/tolmar/music/c.jpg"
+        poster: "/wp-content/uploads/2011/04/C-Party-Band-Demo-Image1.jpg"
 			},
 			{
 				name:"Spanish Guitar",
 				mp3:"/wp-content/uploads/2011/04/D-Spanish-Guitar-Demo.mp3",
-        poster: "/wp-content/themes/Glider/images/tolmar/music/d.jpg"
+        poster: "/wp-content/themes/Glider/images/tolmar/music/c.jpg"
 			},
 			{
 				name:"Solo Guitar",
 				mp3: "/wp-content/uploads/2011/05/soloE.mp3",
-				poster: "/wp-content/uploads/2011/04/E-Solo-Guitar-Demo-Image1.jpg"
+        poster: "/wp-content/themes/Glider/images/tolmar/music/d.jpg"
 			},
 			{
 				name:"Jazz Trio",
