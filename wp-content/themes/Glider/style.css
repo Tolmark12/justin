@@ -346,10 +346,10 @@ ol li { color: #a86426; font-size: 15px; margin: 0 0 5px 30px;}
 h5 { margin: 20px 0 0 0; font-weight: 60000; color: #441e14; }
 
 .jp-jplayer{
-	width: initial !important;
-	height: initial !important;
-}
+	width: 480px !important;
+	height: 270px !important;
+}
 .jp-player img{
-	width: initial !important;
-	height: initial !important;
+	width: 480px !important;
+	height: 270px !important;
 }

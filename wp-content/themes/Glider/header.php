@@ -24,8 +24,8 @@
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/player-style.css" type="text/css" media="screen" title="no title" charset="utf-8">	
-   
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/player-style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
 <!--[if lt IE 7]>
    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/ie6style.css" />
    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/DD_belatedPNG_0.0.8a-min.js"></script>
@@ -35,12 +35,12 @@
    <link rel="stylesheet" type="text/css" href="css/ie7style.css" />
 <![endif]-->
 
-   
+
 <script type="text/javascript">
    document.documentElement.className = 'js';
 </script>
 
-	
+
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.jplayer.min.js"></script>
 	<script type="text/javascript">
@@ -92,7 +92,7 @@
 				$(this.cssSelector.playlist + " ul").empty();
 
 				for (i=0; i < this.playlist.length; i++) {
-					
+
 					var listItem = (i === this.playlist.length-1) ? "<li class='jp-playlist-last'>" : "<li>";
 					listItem += "<a href='#' id='" + this.cssId.playlist + this.instance + "_item_" + i +"' tabindex='1'>"+ this.playlist[i].name +"</a>";
 
@@ -174,31 +174,31 @@
 			// {
 			// 	name:"Big Buck Bunny Trailer",
 			// 	m4v:"http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer_480x270_h264aac.m4v",
-			// 	
+			//
 			// 	poster:"http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
 			// },
 			{
 				name:"Classical Guitar",
 				mp3:"/wp-content/uploads/2011/04/Classical-Guitar-Mp3.mp3",
-				poster: "/wp-content/uploads/2011/04/A-Wedding-Ceremony_Classical-Demo-Image1.jpg"
+				poster: "/wp-content/themes/Glider/images/tolmar/music/a.jpg"
 			},
 			{
 				name:"Vocals",
 				mp3: "/wp-content/uploads/2011/05/vocalB.mp3",
-				poster: "/wp-content/uploads/2011/04/B-Guitar_Vocal-Demo-Image1.jpg"
+        poster: "/wp-content/themes/Glider/images/tolmar/music/b.jpg"
 			},
 			{
 				name:"Party Band",
 				mp3:"/wp-content/uploads/2011/04/C-Party-Band-Demo.mp3",
-				poster: "/wp-content/uploads/2011/04/C-Party-Band-Demo-Image1.jpg"
+        poster: "/wp-content/themes/Glider/images/tolmar/music/c.jpg"
 			},
 			{
 				name:"Spanish Guitar",
 				mp3:"/wp-content/uploads/2011/04/D-Spanish-Guitar-Demo.mp3",
-				poster: "/wp-content/uploads/2011/04/D-Spanish-Guitar-Demo-Image1.jpg"
+        poster: "/wp-content/themes/Glider/images/tolmar/music/d.jpg"
 			},
 			{
-				name:"Solo Guitar", 
+				name:"Solo Guitar",
 				mp3: "/wp-content/uploads/2011/05/soloE.mp3",
 				poster: "/wp-content/uploads/2011/04/E-Solo-Guitar-Demo-Image1.jpg"
 			},
@@ -234,7 +234,7 @@
 			solution: "html,flash",
 			supplied: "mp3"
 		});
-		
+
 	});
 	//]]>
 
@@ -255,74 +255,74 @@
 </head>
 
 <body class="clearfix">
-   
+
    <div id="main-leftarea">
       <!-- <div class="topbg"></div> -->
-      
+
       <a href="<?php bloginfo('url'); ?>"><?php $logo = (get_option('glider_logo') <> '') ? get_option('glider_logo') : get_bloginfo('template_directory').'/images/logo.png'; ?>
 				<img src="<?php echo $logo; ?>" alt="Logo" id="logo"/></a>
-      
+
       <!-- <div id="glow"></div> -->
       <div id="the-knot"></div>
       <?php $home = is_home(); ?>
-      
+
       <div id="menu">
          <ul id="main-menu">
             <li><a href="<?php bloginfo('url'); ?>/#home" class="active<?php if (!$home) echo(' external'); ?>"><?php _e('Home','Glider') ?></a></li>
-            
-            <?php 
+
+            <?php
             $pagesContent = array();
             $i=0;
-            
+
             $home_pages_num = count(get_option('glider_home_pages'));
-                                 
+
             $arr = array( 'post_type' => 'page',
                      'orderby' => 'menu_order',
                      'order' => 'ASC',
                      'post__in' => get_option('glider_home_pages'),
                      'showposts' => $home_pages_num );
-         
+
             query_posts($arr); ?>
             <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
                <?php $hash = get_the_title();
                $hash = strtolower(preg_replace('/ /','_', $hash)); ?>
                <?php $hash = preg_replace('/[^a-z0-9]/','', $hash); ?>
-               
-               <?php if ($i!=0) { ?> 
+
+               <?php if ($i!=0) { ?>
                   <li><a href="<?php bloginfo('url'); ?>/#<?php echo $hash; ?>"<?php if (!$home) echo(' class="external"'); ?>><?php the_title(); ?></a></li>
                <?php } ?>
-               
+
                <?php $pagesContent[$i]['hash'] = $hash;
                global $more; $more=1;
                $pagesContent[$i]['content'] = get_the_content();
                $pagesContent[$i]['content'] = apply_filters('the_content', $pagesContent[$i]['content']);;
                $pagesContent[$i]['title'] = get_the_title();
-               
+
                $thumb = '';
                $width = 173;
                $height = 173;
                $classtext = '';
                $titletext = get_the_title();
-                                    
+
                $thumbnail = get_thumbnail($width,$height,$classtext,$titletext,$titletext);
-               
+
                $pagesContent[$i]['thumbnail'] = $thumbnail["thumb"];
-               
+
                $pagesContent[$i]['use_timthumb'] = $thumbnail["use_timthumb"];
-                              
+
                $pagesContent[$i]['portfolio_categories'] = get_post_meta($post->ID,'et_portfolio_categories',true) ? get_post_meta($post->ID,'et_portfolio_categories',true) : '';
-                              
+
                $pagesContent[$i]['portfolio'] = ( (bool) get_post_meta($post->ID,'et_portfolio_page',true) ) ? true : false;
-               
+
                $i++; ?>
             <?php endwhile; endif; wp_reset_query(); ?>
-            
+
             <li><a href="<?php echo get_category_link(get_cat_ID(get_option('glider_blog_cat'))); ?>" class="external"><?php _e('Blog','Glider'); ?></a></li>
-            
+
          </ul>
       </div> <!-- #main-menu -->
-            
-      <span id="active-arrow"></span>   
-      
+
+      <span id="active-arrow"></span>
+
       <div id="right-border"></div>
    </div> <!-- #main-leftarea -->
