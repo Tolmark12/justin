@@ -208,11 +208,6 @@
 				poster: "/wp-content/uploads/2011/04/F-Jazz-Trio-Demo-Image1.jpg"
 			},
 			{
-				name:"Holiday Jazz Trio",
-				mp3: "/wp-content/uploads/2015/11/jazz-holiday.mp3",
-				poster: "/wp-content/uploads/2015/11/e.jpg"
-			},
-			{
 				name:"Gypsy Jazz",
 				mp3:"/wp-content/uploads/2011/04/G-Gypsy-Jazz-Group-Demo.mp3",
 				poster: "/wp-content/uploads/2011/04/G-Gypsy-Jazz-Trio-Demo-Image.jpg"
@@ -226,7 +221,12 @@
 				name:"Accoustic Duo",
 				mp3:"/wp-content/uploads/2011/04/I-Acoustic-Guitar-Duo-Demo.mp3",
 				poster: "/wp-content/uploads/2011/04/I-Acoustic-Guitar-Duo-Demo-Image.jpg"
-			}
+			},
+      {
+        name:"Holiday Jazz Trio",
+        mp3: "/wp-content/uploads/2015/11/jazz-holiday.mp3",
+        poster: "/wp-content/uploads/2015/11/e.jpg"
+      }
 		], {
 			ready: function() {
 				mediaPlaylist.displayPlaylist();
