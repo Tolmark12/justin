@@ -1,6 +1,7 @@
 web1: #component type & number
+  httpd_index_list:
+    - index.html
   version: 5.6
   name: wp #component settings
   shared_writable_dirs:
     - wp-content/uploads
-

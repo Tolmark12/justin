@@ -1,0 +1,880 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Acoustic and Classical Guitarist and Performer Justin Cash</title>
+<meta name="country" content="USA"/>
+<meta name="state" content="Texas"/>
+<meta name="city" content="Denton, Dallas, Fortworth" />
+<meta name="zipcode" content="76208"/>
+<meta name="geo.region" content="US-TX" />
+<meta name="geo.placename" content="Dallas" />
+<meta name="description" content="Acoustic and classical musician and artist Justin Cash is the top rated performer for the Dallas, North Texas region.  Book your guitar wedding or event today." />
+<meta name="keywords" content="Acoustic, Classical, Guitar, Wedding, Dallas Performer, Singer, Song writer, Musician" />
+
+<!-- <title>Justin Cash | Just another WordPress site</title> -->
+
+<script type="text/javascript" src="http://use.typekit.com/voz3nft.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<link rel="stylesheet" href="http://justincashmusic.com/wp-content/themes/Glider/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://justincashmusic.com/wp-content/themes/Glider/css/jquery.fancybox-1.2.6.css" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="Justin Cash RSS Feed" href="http://justincashmusic.com/?feed=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Justin Cash Atom Feed" href="http://justincashmusic.com/?feed=atom" />
+<link rel="pingback" href="http://justincashmusic.com/xmlrpc.php" />
+<link rel="stylesheet" href="http://justincashmusic.com/wp-content/themes/Glider/player-style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+<!--[if lt IE 7]>
+   <link rel="stylesheet" type="text/css" href="http://justincashmusic.com/wp-content/themes/Glider/css/ie6style.css" />
+   <script type="text/javascript" src="http://justincashmusic.com/wp-content/themes/Glider/js/DD_belatedPNG_0.0.8a-min.js"></script>
+   <script type="text/javascript">DD_belatedPNG.fix('#main-leftarea #glow, #main-rightarea, #main-leftarea #right-border , #tagline, span.overlay, span.magnify, .gallery-area .thumb, span#active-arrow');</script>
+<![endif]-->
+<!--[if IE 7]>
+   <link rel="stylesheet" type="text/css" href="css/ie7style.css" />
+<![endif]-->
+
+
+<script type="text/javascript">
+   document.documentElement.className = 'js';
+</script>
+
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://justincashmusic.com/wp-content/themes/Glider/js/jquery.jplayer.min.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+
+	$(document).ready(function(){
+		var Playlist = function(instance, playlist, options) {
+			var self = this;
+
+			this.instance = instance; // String: To associate specific HTML with this playlist
+			this.playlist = playlist; // Array of Objects: The playlist
+			this.options = options; // Object: The jPlayer constructor options for this playlist
+
+			this.current = 0;
+
+			this.cssId = {
+				jPlayer: "jquery_jplayer_",
+				interface: "jp_interface_",
+				playlist: "jp_playlist_"
+			};
+			this.cssSelector = {};
+
+			$.each(this.cssId, function(entity, id) {
+				self.cssSelector[entity] = "#" + id + self.instance;
+			});
+
+			if(!this.options.cssSelectorAncestor) {
+				this.options.cssSelectorAncestor = this.cssSelector.interface;
+			}
+
+			$(this.cssSelector.jPlayer).jPlayer(this.options);
+
+			$(this.cssSelector.interface + " .jp-previous").click(function() {
+				self.playlistPrev();
+				$(this).blur();
+				return false;
+			});
+
+			$(this.cssSelector.interface + " .jp-next").click(function() {
+				self.playlistNext();
+				$(this).blur();
+				return false;
+			});
+		};
+
+		Playlist.prototype = {
+			displayPlaylist: function() {
+				var self = this;
+				$(this.cssSelector.playlist + " ul").empty();
+
+				for (i=0; i < this.playlist.length; i++) {
+
+					var listItem = (i === this.playlist.length-1) ? "<li class='jp-playlist-last'>" : "<li>";
+					listItem += "<a href='#' id='" + this.cssId.playlist + this.instance + "_item_" + i +"' tabindex='1'>"+ this.playlist[i].name +"</a>";
+
+					// Create links to free media
+					if(this.playlist[i].free) {
+						var first = true;
+						listItem += "<div class='jp-free-media'>(";
+						$.each(this.playlist[i], function(property,value) {
+							if($.jPlayer.prototype.format[property]) { // Check property is a media format.
+								if(first) {
+									first = false;
+								} else {
+									listItem += " | ";
+								}
+								listItem += "<a id='" + self.cssId.playlist + self.instance + "_item_" + i + "_" + property + "' href='" + value + "' tabindex='1'>" + property + "</a>";
+							}
+						});
+						listItem += ")</span>";
+					}
+
+					listItem += "</li>";
+
+					// Associate playlist items with their media
+					$(this.cssSelector.playlist + " ul").append(listItem);
+					$(this.cssSelector.playlist + "_item_" + i).data("index", i).click(function() {
+						var index = $(this).data("index");
+						if(self.current !== index) {
+							self.playlistChange(index);
+						} else {
+							$(self.cssSelector.jPlayer).jPlayer("play");
+						}
+						$(this).blur();
+						return false;
+					});
+
+					// Disable free media links to force access via right click
+					if(this.playlist[i].free) {
+						$.each(this.playlist[i], function(property,value) {
+							if($.jPlayer.prototype.format[property]) { // Check property is a media format.
+								$(self.cssSelector.playlist + "_item_" + i + "_" + property).data("index", i).click(function() {
+									var index = $(this).data("index");
+									$(self.cssSelector.playlist + "_item_" + index).click();
+									$(this).blur();
+									return false;
+								});
+							}
+						});
+					}
+				}
+			},
+			playlistInit: function(autoplay) {
+				if(autoplay) {
+					this.playlistChange(this.current);
+				} else {
+					this.playlistConfig(this.current);
+				}
+			},
+			playlistConfig: function(index) {
+				$(this.cssSelector.playlist + "_item_" + this.current).removeClass("jp-playlist-current").parent().removeClass("jp-playlist-current");
+				$(this.cssSelector.playlist + "_item_" + index).addClass("jp-playlist-current").parent().addClass("jp-playlist-current");
+				this.current = index;
+				$(this.cssSelector.jPlayer).jPlayer("setMedia", this.playlist[this.current]);
+			},
+			playlistChange: function(index) {
+				this.playlistConfig(index);
+				$(this.cssSelector.jPlayer).jPlayer("play");
+			},
+			playlistNext: function() {
+				var index = (this.current + 1 < this.playlist.length) ? this.current + 1 : 0;
+				this.playlistChange(index);
+			},
+			playlistPrev: function() {
+				var index = (this.current - 1 >= 0) ? this.current - 1 : this.playlist.length - 1;
+				this.playlistChange(index);
+			}
+		};
+
+		var mediaPlaylist = new Playlist("1", [
+			// {
+			// 	name:"Big Buck Bunny Trailer",
+			// 	m4v:"http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer_480x270_h264aac.m4v",
+			//
+			// 	poster:"http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+			// },
+			{
+				name:"Classical Guitar",
+				mp3:"/wp-content/uploads/2011/04/Classical-Guitar-Mp3.mp3",
+				poster: "/wp-content/themes/Glider/images/tolmar/music/a.jpg"
+			},
+			{
+				name:"Vocals",
+				mp3: "/wp-content/uploads/2011/05/vocalB.mp3",
+        poster: "/wp-content/themes/Glider/images/tolmar/music/b.jpg"
+			},
+			{
+				name:"Party Band",
+				mp3:"/wp-content/uploads/2011/04/C-Party-Band-Demo.mp3",
+        poster: "/wp-content/themes/Glider/images/tolmar/music/party.jpg"
+			},
+			{
+				name:"Spanish Guitar",
+				mp3:"/wp-content/uploads/2011/04/D-Spanish-Guitar-Demo.mp3",
+        poster: "/wp-content/themes/Glider/images/tolmar/music/c.jpg"
+			},
+			{
+				name:"Solo Guitar",
+				mp3: "/wp-content/uploads/2011/05/soloE.mp3",
+        poster: "/wp-content/themes/Glider/images/tolmar/music/d.jpg"
+			},
+			{
+				name:"Jazz Trio",
+				mp3: "/wp-content/uploads/2011/04/F-Jazz-Trio-Demo.mp3",
+				poster: "/wp-content/uploads/2011/04/F-Jazz-Trio-Demo-Image1.jpg"
+			},
+			{
+				name:"Gypsy Jazz",
+				mp3:"/wp-content/uploads/2011/04/G-Gypsy-Jazz-Group-Demo.mp3",
+				poster: "/wp-content/uploads/2011/04/G-Gypsy-Jazz-Trio-Demo-Image.jpg"
+			},
+			{
+				name:"World Music",
+				mp3: "/wp-content/uploads/2011/04/Ethnic-Demo.mp3",
+				poster: "/wp-content/uploads/2011/04/H-World_Ethnic-Demo-Image.jpg"
+			},
+			{
+				name:"Accoustic Duo",
+				mp3:"/wp-content/uploads/2011/04/I-Acoustic-Guitar-Duo-Demo.mp3",
+				poster: "/wp-content/uploads/2011/04/I-Acoustic-Guitar-Duo-Demo-Image.jpg"
+			},
+      {
+        name:"Holiday Jazz Trio",
+        mp3: "/wp-content/uploads/2015/11/jazz-holiday.mp3",
+        poster: "/wp-content/uploads/2015/11/e.jpg"
+      }
+		], {
+			ready: function() {
+				mediaPlaylist.displayPlaylist();
+				mediaPlaylist.playlistInit(false); // Parameter is a boolean for autoplay.
+			},
+			ended: function() {
+				mediaPlaylist.playlistNext();
+			},
+			swfPath: "/wp-content/themes/Glider/js",
+			solution: "html,flash",
+			supplied: "mp3"
+		});
+
+	});
+	//]]>
+
+	</script>
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/justincashmusic.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.1"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d");return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(String.fromCharCode(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(String.fromCharCode(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(String.fromCharCode(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(String.fromCharCode(55357,56835),0,0):e.fillText(String.fromCharCode(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<meta content="Glider v.1.8" name="generator"/><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='et-shortcodes-css-css'  href='http://justincashmusic.com/wp-content/themes/Glider/epanel/shortcodes/shortcodes.css?ver=1.6' type='text/css' media='all' />
+<script type='text/javascript' src='http://justincashmusic.com/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://justincashmusic.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://justincashmusic.com/wp-content/themes/Glider/epanel/shortcodes/js/et_shortcodes_frontend.js?ver=1.6'></script>
+<link rel='https://api.w.org/' href='http://justincashmusic.com/?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://justincashmusic.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://justincashmusic.com/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 4.4.1" />
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32593521-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body class="clearfix">
+
+   <div id="main-leftarea">
+      <!-- <div class="topbg"></div> -->
+
+      <a href="http://justincashmusic.com">				<img src="http://justincashmusic.com/wp-content/themes/Glider/images/logo.png" alt="Logo" id="logo"/></a>
+
+      <!-- <div id="glow"></div> -->
+      <div id="the-knot"></div>
+
+      <div id="menu">
+         <ul id="main-menu">
+            <li><a href="http://justincashmusic.com/#home" class="active">Home</a></li>
+
+
+
+
+                                 <li><a href="http://justincashmusic.com/#videos">Videos</a></li>
+
+
+                                 <li><a href="http://justincashmusic.com/#reviews">Reviews</a></li>
+
+
+                                 <li><a href="http://justincashmusic.com/#faq">FAQ</a></li>
+
+
+                                 <li><a href="http://justincashmusic.com/#rates">Rates</a></li>
+
+
+                                 <li><a href="http://justincashmusic.com/#contact">Contact</a></li>
+
+
+            <li><a href="http://justincashmusic.com/?cat=1" class="external">Blog</a></li>
+
+         </ul>
+      </div> <!-- #main-menu -->
+
+      <span id="active-arrow"></span>
+
+      <div id="right-border"></div>
+   </div> <!-- #main-leftarea -->
+
+	<div id="main-rightarea">
+		<div class="topbg"></div>
+					<div class="block" id="home">
+
+
+
+					<div class="content-area">
+												<h2 class="title">Listen</h2>
+
+<div class="jp-video jp-video-270p">
+    <div class="jp-type-playlist">
+      <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+      <div id="jp_interface_1" class="jp-interface">
+        <div class="jp-video-play"></div>
+        <ul class="jp-controls">
+          <li><a href="#" class="jp-play" tabindex="1">play</a></li>
+          <li><a href="#" class="jp-pause" tabindex="1">pause</a></li>
+          <li><a href="#" class="jp-stop" tabindex="1">stop</a></li>
+          <li><a href="#" class="jp-mute" tabindex="1">mute</a></li>
+          <li><a href="#" class="jp-unmute" tabindex="1">unmute</a></li>
+          <li><a href="#" class="jp-previous" tabindex="1">previous</a></li>
+          <li><a href="#" class="jp-next" tabindex="1">next</a></li>
+        </ul>
+        <div class="jp-progress">
+          <div class="jp-seek-bar">
+            <div class="jp-play-bar"></div>
+          </div>
+        </div>
+        <div class="jp-volume-bar">
+          <div class="jp-volume-bar-value"></div>
+        </div>
+        <div class="jp-current-time"></div>
+        <div class="jp-duration"></div>
+      </div>
+      <div id="jp_playlist_1" class="jp-playlist">
+        <ul>
+          <!-- The method Playlist.displayPlaylist() uses this unordered list -->
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+ 					</div> <!-- .content-area -->
+							</div> <!-- .block -->
+					<div class="block" id="videos">
+
+
+
+					<div class="content-area">
+												<h2 class="title">Videos</h2>
+						<p><iframe width="570" height="330" src="http://www.youtube.com/embed/QBTwNfRgj-E" frameborder="0" allowfullscreen></iframe><br />
+</p>
+<p><!-- acoustic --><br />
+<iframe width="570" height="330" src="https://www.youtube.com/embed/tLgcVnOEnZE" frameborder="0" allowfullscreen></iframe><br />
+</p>
+<p><iframe src="http://player.vimeo.com/video/44825845" width="570" height="330" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><br />
+</p>
+<p><!-- electric --><br />
+<iframe width="570" height="330" src="https://www.youtube.com/embed/7hQKI6oZd1M" frameborder="0" allowfullscreen></iframe></p>
+					</div> <!-- .content-area -->
+							</div> <!-- .block -->
+					<div class="block" id="reviews">
+
+
+
+					<div class="content-area">
+												<h2 class="title">Reviews</h2>
+						<p><!--
+
+##       ######## ######## ########     ######   #######  ##       ##     ## ##     ## ##    ##
+##       ##       ##          ##       ##    ## ##     ## ##       ##     ## ###   ### ###   ##
+##       ##       ##          ##       ##       ##     ## ##       ##     ## #### #### ####  ##
+##       ######   ######      ##       ##       ##     ## ##       ##     ## ## ### ## ## ## ##
+##       ##       ##          ##       ##       ##     ## ##       ##     ## ##     ## ##  ####
+##       ##       ##          ##       ##    ## ##     ## ##       ##     ## ##     ## ##   ###
+######## ######## ##          ##        ######   #######  ########  #######  ##     ## ##    ##
+
+--></p>
+<div class="float-left">
+<div class="testimony">
+<p>The best live music I have ever heard.</p>
+<p class="signature">-Kelly Hay, Laura’s Event Services</person>
+  </div>
+<div class="testimony">
+<p>…An all-around professional.</p>
+<p class="signature">-Hailey Hamilton, D Magazine</person>
+  </div>
+<div class="testimony">
+<p>I started getting teary-eyed when I listened to his ceremony music!</p>
+<p class="signature">-Mary Gallagher, Todd Events</person>
+  </div>
+<div class="testimony">
+<p>You added such a touch of coolness, calmness, classiness, and that oh so elusive and wonderful &#8220;je ne sais quoi&#8221; to our wedding! Our first dance was so sweet&#8230;and I tell ya&#8230;Frank Sinatra himself couldn&#8217;t do it any better. Does your wife know how lucky she is!?</p>
+<p class="signature">-Kristin Robinson, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>I swear I have teared up every time I’ve listened to the short excerpt on your site. It evokes the same emotions I felt when I found “the dress”.</p>
+<p class="signature">-Kristin Talley, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>An amazing artist, and a true professional. Always my first call. Love working with Justin!!</p>
+<p class="signature">-Melinda Corder, Encore Productions, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>Your music really changed the dynamic of the event, it was so positive!</p>
+<p class="signature">Michele Yates, UT Southwestern Medical Center</person>
+  </div>
+<div class="testimony">
+<p>Justin played acoustic guitar and sang for our first dance</p>
+<p class="signature">&#8211; even with 200 guests watching us, he made it feel like it was an intimate moment between the two of us.</person>
+  </div>
+<div class="testimony">
+<p>His traditional wedding songs on acoustic guitar gave us the modern feel we were looking for.</p>
+<p class="signature">-Errin &#038; Zach Sieling</person>
+  </div>
+<div class="testimony">
+<p>Justin! Thank YOU and the band for performing! Everyone said how awesome and entertaining you all were. They LOVED your style and dance-ability! We would recommend you to anyone who asked! Thanks for being so flexible and readily available via email or phone throughout the process!</p>
+<p class="signature">-Will and Chandler Haake, Fort Worth, TX</person>
+  </div>
+<div class="testimony">
+<p>You and your band were fabulous! So many people said they loved the band!!</p>
+<p class="signature">-Chase and Bryttany Bradley, San Angelo, TX</person>
+  </div>
+<div class="testimony">
+<p>…A consummate professional.</p>
+<p class="signature">&#8211; Melinda Corder, Carol Marks Music </person>
+  </div>
+<div class="testimony">
+<p>You delivered exactly what I was hoping for!</p>
+<p class="signature">-Caroline Swift, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>The texts from the wedding guests have been relentless… your band rocked it Saturday night, it was AWESOME! Everyone had such a great time, Thank you very much; you really made the night a huge success!</p>
+<p class="signature">-Marty and Jennifer Flynn, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>Brides love  Justin and are always happy to have picked him. Justin is flexible, easy to work with, and gives brides exactly what they want and more.</p>
+<p class="signature">-Elise Nipp, Encore Entertainment and Events</person>
+  </div>
+<div class="testimony">
+<p>If I could give him 6 stars, I would…</p>
+<p class="signature">-Elisa Klemm, Casper, WY</person>
+  </div>
+<div class="testimony">
+<p>He even learned a special song by request that he&#8217;d never heard before, and played it masterfully to help us personalize the wedding.</p>
+<p class="signature">-Andy and Cathy Rainey, Tuscaloosa, Alabama</person>
+  </div>
+<div class="testimony">
+<p>…The ceremony music of our dreams!! Everyone was RAVING about it!!!</p>
+<p class="signature">-Kirstin Berney, Jackson Durham Floral/Evvent Design</person>
+  </div>
+<div class="testimony">
+<p>Thank you so much for the sweet words and making our wedding so special with your amazing talent!  I could have listened to you all night!  I got so many compliments on you guys!  It was PERFECT!!</p>
+<p class="signature">-Kelly Masters, Austin, TX</person>
+  </div>
+<div class="testimony">
+<p>I was hearing compliments about you all night, the next day, and since we’ve been back. I don’t know how to express enough how amazing of a job you did at our wedding!</p>
+<p class="signature">-Mary Beth Shannahan, Mobile, AL</person>
+  </div>
+<div class="testimony">
+<p>Justin made our backyard wedding reception the jazzy-cool scene we envisioned and, later in the evening, packed the dance floor to capacity in minutes. Justin was the easiest decision in planning our wedding!</p>
+<p class="signature">-Leigh Breunig, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>…So easy to work with!</p>
+<p class="signature">-Kara Vaught, Medical Education Alliance, Temple, TX</person>
+  </div>
+<div class="testimony">
+<p>…So incredibly kind…</p>
+<p class="signature">-Whitney Cotten, DFW Events</person>
+  </div>
+<div class="testimony">
+<p>…So many people told me how much they loved the band!</p>
+<p class="signature">-Kirsten Holmes, Godley, TX</person>
+  </div>
+<div class="testimony">
+<p>An amazing and gifted musician…</p>
+<p class="signature">Sara DuCuennois, NSU, Ft Lauderdale, FL</person>
+  </div>
+<div class="testimony">
+<p>You were amazing! You made the day super special.</p>
+<p class="signature">-Brittany Croson, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>You came through for us…big time.</p>
+<p class="signature">-Darren Myers, Assistant Vice President, Frost Bank</person>
+  </div>
+<div class="testimony">
+<p> I wasn&#8217;t expecting much dancing at the reception but the music was so fantastic I guess the guests couldn&#8217;t help dancing!</p>
+<p class="signature">-Raelyn Newton, Helmutwalker Photography</person>
+  </div>
+<div class="testimony">
+<p>My fiancé and I had a special request for our first dance song, which Justin learned in a short amount of time&#8212;-and he nailed it! We couldn&#8217;t have been more pleased with his performance at both our ceremony and our reception!</p>
+<p class="signature">-Katie &#038; Derek  Honea, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>Justin is our first call for so many  events.  Always the best, Justin will continue to be at the top of Encore&#8217;s roster. </p>
+<p class="signature"<- Luana Stoutmeyer,  President  Encore Productions Entertainment</person>
+  </div>
+<div class="testimony">
+<p>I fell in love with his sound and asked him to play at my own wedding reception!!</p>
+<p class="signature"<-Vail Thrasher, Event Manager, Four Seasons Resort and Club </person>
+  </div>
+<div class="testimony">
+<p>Justin had the sound set just right- not too loud, but not too soft, either.</p>
+<p class="signature">-Elizabeth &#038; Craig Jarvis, Canton, Texas</person>
+  </div>
+<div class="testimony">
+<p>I overheard my cousin at dinner saying that he would love the soundtrack to our wedding- (Justin’s music!) I agree!!</p>
+<p class="signature">-Jamie and Mark Mcneal, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>Truly appreciate your professionalism and talent…</p>
+<p class="signature">-Wendy Kidd, CWP, President, Each and Every Detail</person>
+  </div>
+<div class="testimony">
+<p>Just PERFECT for the occasion, venue, and guests!</p>
+<p class="signature">-Martha Smith, Professor of Vocal Performance, Dallas Baptist University</person>
+  </div>
+<div class="testimony">
+<p>EXACTLY what we were looking for!  His playlist is extensive and we were able to find music that fits our personalities for our wedding ceremony. He is very accommodating and goes above and beyond to make your special occasion as perfect as possible. During the wedding planning period Justin was helpful in selecting the correct music and timely in replying to our questions. He is such a great guy to work with.</p>
+<p class="signature">-Andrew and Ashley Gannon, Mckinney, TX</person>
+  </div>
+</div>
+<p><!--
+
+########  ####  ######   ##     ## ########     ######   #######  ##       ##     ## ##     ## ##    ##
+##     ##  ##  ##    ##  ##     ##    ##       ##    ## ##     ## ##       ##     ## ###   ### ###   ##
+##     ##  ##  ##        ##     ##    ##       ##       ##     ## ##       ##     ## #### #### ####  ##
+########   ##  ##   #### #########    ##       ##       ##     ## ##       ##     ## ## ### ## ## ## ##
+##   ##    ##  ##    ##  ##     ##    ##       ##       ##     ## ##       ##     ## ##     ## ##  ####
+##    ##   ##  ##    ##  ##     ##    ##       ##    ## ##     ## ##       ##     ## ##     ## ##   ###
+##     ## ####  ######   ##     ##    ##        ######   #######  ########  #######  ##     ## ##    ##
+
+--></p>
+<div class="float-right">
+<div class="testimony">
+<p>…Contagious warmth…willing to bend over backwards to make the client&#8217;s vision a reality.  Every time we&#8217;ve worked together we end up with an ecstatic client begging for more.</p>
+<p class="signature">-Alison Morris Baker, DFW events, Inc.</person>
+  </div>
+<div class="testimony">
+<p>I appreciate the time and attention you took to make the event so special for all of us. You are the best. I understand you do thousands of these events and you can line your walls with your fan club. Please consider us members of that club.</p>
+<p class="signature">&#8211; Warmly, Patti McGuire</person>
+  </div>
+<div class="testimony">
+<p>He truly cares about each event he is asked to be a part of, he has  thought through every detail far in advance, and he is so organized, that it is always my pleasure to refer  him!!!</p>
+<p class="signature">-Emily Youngblood, President, Blessed Unions</person>
+  </div>
+<div class="testimony">
+<p>…Absolutely perfect for our intimate wedding reception, yet you also really helped get the party going! Thank you so much for traveling out to Scottsdale, Arizona to be a part of our very special day! After searching endlessly for bands in the Phoenix/Scottsdale area, we knew we found the perfect fit for us when we heard you and your band! The music was everything we wanted and more! </p>
+<p class="signature">-Deanie Yuska, Deanie Michelle events, Dallas, TX </person>
+  </div>
+<div class="testimony">
+<p>The perfect entertainment for that little wedding lunch, loved it!</p>
+<p class="signature">&#8211; Alison J. Fuld, TWP  l  Social Catering Manager, Rosewood Crescent Hotel </person>
+  </div>
+<div class="testimony">
+<p>Justin, thank you so much for playing at our wedding it was AMAZING and your band made it so much fun!</p>
+<p class="signature">-Jennifer and Gavin Finlay, Austin, TX</person>
+  </div>
+<div class="testimony">
+<p>…Professionalism and wonderful music at our son’s rehearsal dinner on Friday night.  I knew that I had picked the right musicians and you were perfect for the occasion.</p>
+<p class="signature">-Ronda Feeney, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>My mom had some weird song requests that Justin graciously accommodated!</p>
+<p class="signature">-Ashley Beale, Event Planner, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>The music was perfect through dinner at our reception at Maggiano’s and even more enjoyable when we got to turn it up and have vocals and get folks out on the dance floor!</p>
+<p class="signature">-Dawn Collins, Atlanta, GA</person>
+  </div>
+<div class="testimony">
+<p>…Always so accommodating!</p>
+<p class="signature">-Michele Yates, UT Southwestern Cancer Center</person>
+  </div>
+<div class="testimony">
+<p>…Accommodating  when the time schedule changed a bit and when the crowd started making  requests. Justin sounds like Harry Connick Jr. to me, and that is why I wanted him to sing our first song &#8211; It Had To Be You. It made our day that much more special. Thanks Justin!  </p>
+<p class="signature">Renee Berres Quigley , Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>You were the musician that all were talking about.  You did exactly what we wanted at our wedding.   Thank you for being flexible and totally delivering.</p>
+<p class="signature">-Derrick Logozzo, Director of Instrumental Music, Eastfield Community College</person>
+  </div>
+<div class="testimony">
+<p>Awesome show! All our friends and family kept commenting on how great you all sounded at our wedding.</p>
+<p class="signature">-Austin and Shelby Martin, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>…Always a pleasure to work with.</p>
+<p class="signature">&#8211; Reagan Rybolt, Private Events Director, Stonebriar Country Club</person>
+  </div>
+<div class="testimony">
+<p>Everybody LOVED your band!</p>
+<p class="signature">-Janet Lambert, Digital Realty Trust</person>
+  </div>
+<div class="testimony">
+<p>Justin was fabulous!  He and his band were very professional and the perfect band for the Crescent Club.</p>
+<p class="signature">-Katie Conally, KUJO FM Radio </person>
+  </div>
+<div class="testimony">
+<p>We always rave about Justin to our clients…</p>
+<p class="signature">-Katherine Mathes, Owner, Mathes and Co Events.</person>
+  </div>
+<div class="testimony">
+<p>Your sound is the perfect atmosphere for ANY event. We love working with you!</p>
+<p class="signature">-DFW Events, Dallas, Texas</person>
+  </div>
+<div class="testimony">
+<p>My number one recommendation when people want a guitarist &#038; vocalist.</p>
+<p class="signature">-Glenn Roush, Roush Productions- DFW’s number one DJ service</person>
+  </div>
+<div class="testimony">
+<p>All of the guests complimented me on what a great musician I chose. Thank you for loaning us your beautiful voice and guitar for the day! Everyone really enjoyed the music. It was perfect!!</p>
+<p class="signature">-Kelly Ray, Frisco, TX</person>
+  </div>
+<div class="testimony">
+<p>You were definitely a huge part of this successful event, along with many others I&#8217;ve also hosted. It is such a pleasure working with you and I will continue to keep recommending you, as I think you are a perfect fit for our venue.</p>
+<p class="signature">-Jessica Robertson, Rosewood Crescent Hotel, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>Everyone LOVED your performance, and I especially loved working with you. I will definitely be in touch for future events at the Nasher Sculpture Center.</p>
+<p class="signature">-Mary Hollis Huddleston,Special Events Manager<br />Nasher Sculpture Center</person>
+  </div>
+<div class="testimony">
+<p>Post wedding, the feeling is just as strong if not stronger that Justin and the band were the perfect fit for Brittany and Jeremy’s wedding.</p>
+<p class="signature">-Dr Robert and Cindy Bjoraker</person>
+  </div>
+<div class="testimony">
+<p>We had Justin play prelude music as every one was coming into the church for the ceremony. He provided a list of music he plays and played beautifully. He was great and easy to communicate and help out where ever help was needed. He was very accommodating, we had originally hired him to play at the reception during cocktail hour but decided to use him at the ceremony and he worked with us on it, he was great!</p>
+<p class="signature">-Kaylee Little, Mckinney, TX</person>
+  </div>
+<div class="testimony">
+<p>Amazing job last night!  Our clients (and another planner that works in the Dallas area) were all raving about you!</p>
+<p class="signature">-Stacy Wright, Corporate Event Planner, Freese and Nichols.</person>
+  </div>
+<div class="testimony">
+<p>Thank you as always for your professionalism.  I love working with vendors that &#8220;get it&#8221;!  :)</p>
+<p class="signature">-Crystal M. Frasier, CWC, CWP; Crystal Frasier Weddings</person>
+  </div>
+<div class="testimony">
+<p>You guys made our wedding reception so amazing.  Our friends won&#8217;t shut up about it!  You guys were so easy to work with, and the music was perfect.  I wish we lived in Dallas permanently so we could crash every wedding you guys play.  It was a blast!</p>
+<p class="signature">-Michael and Sarah Roberts, Washington, DC</person>
+  </div>
+<div class="testimony">
+<p>The mix of instrumental songs and ones with singing was just what we needed. You sensed when we needed a certain type of music as the evening progressed. You and your music added so much to our event!</p>
+<p class="signature">-Libby Allred, Dallas, TX</person>
+  </div>
+<div class="testimony">
+<p>Justin always makes us look good.</p>
+<p class="signature">-Anglea Stone, Todd Events</person>
+  </div>
+<div class="testimony">
+<p>Justin really is the best in town.Tons of experience performing private events, and super easy to work with. You will love him!</p>
+<p class="signature">-Adam Wilmore, Encore Productions Entertainment</person>
+  </div>
+<div class="testimony">
+<p>You made the planning process so easy, thank you for being so flexible!</p>
+<p class="signature">-Michael and Sarah Roberts, Washington, DC</person>
+  </div>
+<div class="testimony">
+<p>We couldn&#8217;t have found anyone more perfect to play at our wedding!!</p>
+<p class="signature">-Melissa Parks, Dallas, TX</person>
+  </div>
+</div>
+<div class="clear-all">&nbsp;</div>
+					</div> <!-- .content-area -->
+							</div> <!-- .block -->
+					<div class="block" id="faq">
+
+
+
+					<div class="content-area">
+												<h2 class="title">FAQ</h2>
+						<p class="Q">How much do you charge?</p>
+<p class="A">Kindly let me know what you are looking for, and I will send you a pricing sheet with a variety of options to choose from. Please email me at <script type="text/javascript">document.write("<n uers=\"znvygb:whfgva\100whfgvapnfuzhfvp\056pbz\">whfgva\100whfgvapnfuzhfvp\056pbz<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));</script></p>
+<p class="A">You can also have a quick look at the RATES  page of this website to save time.</p>
+<p class="Q">I want an intimate feel, it’s a small wedding/party, what would you recommend?</p>
+<p class="A">A solo, duo, or small trio all work magnificently for this type of event. Check out  the HOME  page of this website to hear the sound.</p>
+<p class="Q">I want live music, but I don’t want it too loud, so that the guests can talk.</p>
+<p class="A">Hire someone who you know will be sensitive to this.  Acoustic guitar works like a charm in this situation.</p>
+<p class="Q">How big of a band do I need?</p>
+<p class="A">For dinner music,  a solo or a duo works best. For dancing, you need a minimum of a three-piece band, preferably a quartet. If your budget and the room allow, a five or six piece band can kick it up even a notch higher and really get the party moving.</p>
+<p class="Q">Where can I see you performing live?</p>
+<p class="A">I’m performing somewhere almost every night, since some of these events are private, please send me an email at <script type="text/javascript">document.write("<n uers=\"znvygb:whfgva\100whfgvapnfuzhfvp\056pbz\">whfgva\100whfgvapnfuzhfvp\056pbz<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));</script> so that I can send you some options of public shows close by your home.</p>
+<p class="Q">We want it to be a party with everyone dancing, what do you recommend?</p>
+<p class="A">To get the party dancing, you’ll need at minimum a three-piece band that includes drums.  If you can hire a band whose guitar player also sings, you’ll get a quartet for the price of a trio.</p>
+<p class="Q">Why should I hire live music when I could have a DJ?</p>
+<p class="A">A DJ is great.  They can draw upon a wealth of songs.  However, “ain’t nothin’ like the real thing” when it comes to live music, especially if the repertoire is broad and the lead singer engages the crowd.  It’s like your own private concert. You&#8217;ll never forget it.<br />
+  <br />Note- when budget is an issue, keep in mind that most professional DJ&#8217;s actually charge as much as a medium sized live band.</p>
+<p class="Q">Do we need to meet before the event?</p>
+<p class="A">Let’s do it- meeting in person is great, however, many people planning events have busy work schedules and prefer to take care of the music over the phone and online, which is also fine.</p>
+<h4>Wedding Ceremony/Reception:</h4>
+<p class="Q">How much do you charge?</p>
+<p class="A">Kindly let me know what you are looking for, and I will send you a pricing sheet with a variety of options to choose from.<br />
+  <br />Please email me at <script type="text/javascript">document.write("<n uers=\"znvygb:whfgva\100whfgvapnfuzhfvp\056pbz\">whfgva\100whfgvapnfuzhfvp\056pbz<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));</script></p>
+<p class="Q">Why acoustic guitar instead of a string quartet for a wedding ceremony?</p>
+<p class="A">One guitar by itself can perform all of the standard string quartet wedding pieces. Have a listen to the &#8220;Wedding Ceremony/Classical&#8221; Demo on the HOME page of this website.<br />
+  <br />The guitar is classic yet contemporary sounding at the same time, as well as intimate and romantic. Plus, you only need to hire ONE person.</p>
+<p class="Q">I want to do something less traditional then the typical “Pachelbel’s Canon”, but still elegant and romantic- what do I do?</p>
+<p class="A">Please email me at **  so you can tell me what kind of music fits you and your fiancée’s personalities best. I’d be happy to learn whatever “your song” might be and perform it for you to make it even more special.</p>
+<p class="Q">What music should I choose for the Processional, Recessional, etc&#8230; I have no idea!</p>
+<p class="A">Please email me at ** , I&#8217;ll send you a helpful time-saving guide that will make choosing your ceremony music a breeze.</p>
+<p class="Q">What songs do you perform?</p>
+<p class="A">Hundreds!  Email me so I can send you a full song list: <script type="text/javascript">document.write("<n uers=\"znvygb:whfgva\100whfgvapnfuzhfvp\056pbz\">whfgva\100whfgvapnfuzhfvp\056pbz<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));</script><br />
+  <br />If I don’t yet know one you absolutely love, let me know, I’d be happy to learn it for you.</p>
+<p class="Q">Would you be willing to learn a new song for our first dance?</p>
+<p class="A">Of course! I am always up for learning something new, email me at <script type="text/javascript">document.write("<n uers=\"znvygb:whfgva\100whfgvapnfuzhfvp\056pbz\">whfgva\100whfgvapnfuzhfvp\056pbz<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));</script> and let’s talk about the song.<br />
+  <br />Give a quick read on the TESTIMONIALS  page of this website to hear what brides who requested a special song have to say about it!</p>
+<p class="Q">Do you travel?</p>
+<p class="A">Absolutely.  Las Vegas, Los Angeles, Scottsdale AZ, to name a few recent destination weddings, as well as all over Texas.</p>
+<p class="Q">What are your credentials?</p>
+<p class="A">Master’s Degree in guitar from the University of North Texas. Performing music is my full-time job.</p>
+<p class="Q">What do you need in order to hold the date for me?</p>
+<p class="A">As soon as I have your signed contract in hand along with the retainer check, that date is set in stone.</p>
+					</div> <!-- .content-area -->
+							</div> <!-- .block -->
+					<div class="block" id="rates">
+
+
+
+					<div class="content-area">
+												<h2 class="title">Rates</h2>
+						<h5>Timesaving Tip:</h5>
+<p>With such a wide variety of options from a buddy with an ipod- to a $10,000, 12-piece band, how do I know what is fair?</p>
+<p>In order to give you an accurate and competitive quote, a musician needs to know just a few things from you- be prepared with these when you call him or her:</p>
+<h5>Event details:</h5>
+<ol>
+<li>Date</li>
+<li>Location</li>
+<li>Hours that live music is needed</li>
+<li>Size of group you need, whether soloist or full band</li>
+<li>Amount of people attending</li>
+</ol>
+<h5>Some helpful questions to ask your prospective entertainment:</h5>
+<ol>
+<li>Is performing your full time job?</li>
+<li>Do you have a music degree?</li>
+<li>Do you have a list of testimonials from past clients?</li>
+<li>Do you provide your own sound equipment?</li>
+<li>Do you have sound samples you can send me?</li>
+</ol>
+<p>Call your prospective entertainer.  You can learn a lot about them by the phone conversation itself.</p>
+<p>After weighing your options, choose the one you want to work with most, and enjoy the live music!</p>
+					</div> <!-- .content-area -->
+							</div> <!-- .block -->
+					<div class="block" id="contact">
+
+
+
+					<div class="content-area">
+												<h2 class="title">Contact</h2>
+						<p>Email:</p>
+<p><script type="text/javascript">// <![CDATA[
+document.write(
+"<n uers=\"znvygb:whfgva\100whfgvapnfuzhfvp\056pbz\">whfgva\100whfgvapnfuzhfvp\056pbz<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+// ]]></script><br />
+<br />
+Phone: 972.809.8820</p>
+					</div> <!-- .content-area -->
+							</div> <!-- .block -->
+
+
+	</div> <!-- #main-rightarea -->
+
+
+	<!-- <script type="text/javascript" src="http://justincashmusic.com/wp-content/themes/Glider/js/cufon-yui.js"></script> -->
+	<script type="text/javascript" src="http://justincashmusic.com/wp-content/themes/Glider/js/colaborate_thin.js"></script>
+	<script type="text/javascript" src="http://justincashmusic.com/wp-content/themes/Glider/js/jquery.fancybox-1.2.6.pack.js"></script>
+	<script type="text/javascript" src="http://justincashmusic.com/wp-content/themes/Glider/js/jquery.scrollTo-min.js"></script>
+
+	<script type="text/javascript">
+	//<![CDATA[
+		// ***** FIX TO GET MUSIC PLAYER TO WORK *********** jQuery.noConflict();
+		//
+		// 		//
+		jQuery("a[class^='fancybox']").fancybox({
+			'overlayOpacity'	:	0.7,
+			'overlayColor'		:	'#000000',
+			'zoomSpeedIn'		:	500,
+			'zoomSpeedOut'		:	500
+		});
+
+		var $rightArea = jQuery('#main-rightarea'),
+			rightAreaHeight = $rightArea.height(),
+			leftAreaParts = '#main-leftarea, #main-leftarea #right-border',
+			$galleryThumb = jQuery('.gallery-area .thumb'),
+			$menuLink = jQuery('ul#main-menu li a'),
+			menuTopPos = jQuery('#main-leftarea #menu').position().top;
+
+		jQuery('span.magnify').css('opacity','0');
+
+		if ( rightAreaHeight > 1024 ) jQuery(leftAreaParts).css('height',rightAreaHeight);
+
+		$galleryThumb.hover(function(){
+			jQuery(this).stop(true, true).animate({top: 6, paddingBottom: 0}, 400).find('span.magnify').stop(true, true).animate({opacity: 1}, 400).end().find('img').stop(true, true).animate({opacity: 0.7}, 400);
+		}, function(){
+			jQuery(this).stop(true, true).animate({top: 0, paddingBottom: 13}, 400).find('span.magnify').stop(true, true).animate({opacity: 0}, 400).end().find('img').stop(true, true).animate({opacity: 1}, 400);
+		});
+
+		var windowHash = window.location.hash;
+
+		if (windowHash) {
+			var activeLink = windowHash.substring(1),
+				$targetLink = $menuLink.parent().find('a[href$=#'+activeLink+']');
+
+			$menuLink.removeClass('active');
+
+			$targetLink.addClass('active');
+
+			jQuery('span#active-arrow').css('top',($targetLink.position().top+menuTopPos-3));
+		}
+
+		var isHome = true;
+
+		if (!isHome) {
+			$targetLink = $menuLink.parent().find('a').filter(':last');
+			$menuLink.removeClass('active');
+			$targetLink.addClass('active');
+			jQuery('span#active-arrow').css('top',($targetLink.position().top+menuTopPos-6));
+		}
+
+		$menuLink.click(function(event){
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				if (jQuery(this).hasClass('external')) return;
+				event.preventDefault();
+				if (jQuery(this).hasClass('active')) return false;
+				if (jQuery("html:animated").length) return false;
+
+				$menuLink.parent().find('a').removeClass('active');
+				jQuery(this).addClass('active');
+
+				var activePos = jQuery(this).parent().position().top,
+					linkId = this.hash.substring(1);
+
+				jQuery('span#active-arrow').animate({top: (activePos + menuTopPos)},500);
+				
+				jQuery.scrollTo( '#'+linkId, { duration:500, onAfter:function(){
+						window.location.hash = '#'+linkId;
+					}
+				});
+			}
+		}).hover(function(){
+			jQuery(this).stop().animate({left: '-10px'},200);
+		}, function(){
+			jQuery(this).stop().animate({left: '0px'},200)
+		});
+
+		// window.setInterval( function() {Cufon.refresh('#main-leftarea a');}, 100 );
+
+		// 	//]]>
+	</script>	<script type='text/javascript' src='http://justincashmusic.com/wp-includes/js/wp-embed.min.js?ver=4.4.1'></script>
+</body>
+</html>
