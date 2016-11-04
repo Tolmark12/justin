@@ -196,10 +196,15 @@
         poster: "/wp-content/themes/Glider/images/tolmar/music/c.jpg"
 			},
 			{
-				name:"Solo Guitar",
+				name:"Solo Acoustic Guitar",
 				mp3: "/wp-content/uploads/2011/05/soloE.mp3",
         poster: "/wp-content/themes/Glider/images/tolmar/music/d.jpg"
 			},
+      {
+        name:"Solo Acoustic Guitar II - Danny Boy",
+        mp3: "/wp-content/uploads/2016/11/Justin-Cash-Acoustic-Guitar-Solo-Danny-Boy.mp3",
+        poster: "/wp-content/uploads/2016/11/dannyboy.jpg"
+      },
 			{
 				name:"Jazz Trio",
 				mp3: "/wp-content/uploads/2011/04/F-Jazz-Trio-Demo.mp3",
@@ -224,6 +229,21 @@
         name:"Holiday Jazz Trio",
         mp3: "/wp-content/uploads/2015/11/jazz-holiday.mp3",
         poster: "/wp-content/uploads/2015/11/e.jpg"
+      },
+      {
+        name:"Texas Blues Band",
+        mp3: "/wp-content/uploads/2016/11/Justin-Cash-Texas-Blues-Band.mp3",
+        poster: "/wp-content/uploads/2016/11/texas-blues.jpg"
+      },
+      {
+        name:"Latin Rock",
+        mp3: "/wp-content/uploads/2016/11/Justin-Cash-Latin-Rock_Border-Band-Demo.mp3",
+        poster: "/wp-content/uploads/2016/11/latin.jpg"
+      },
+      {
+        name:"Bluegrass and Country",
+        mp3: "/wp-content/uploads/2016/11/Justin-Cash-Bluegrass_Country_Folk-Demo.mp3",
+        poster: "/wp-content/uploads/2016/11/bluegrass.jpg"
       }
 		], {
 			ready: function() {
@@ -860,7 +880,7 @@ Phone: 972.809.8820</p>
 					linkId = this.hash.substring(1);
 
 				jQuery('span#active-arrow').animate({top: (activePos + menuTopPos)},500);
-				
+
 				jQuery.scrollTo( '#'+linkId, { duration:500, onAfter:function(){
 						window.location.hash = '#'+linkId;
 					}
